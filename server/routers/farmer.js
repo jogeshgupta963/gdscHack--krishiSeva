@@ -16,8 +16,8 @@ farmerRouter
 //desc to create farmer profile
 //access private
 farmerRouter
-    .route('/profile/home')
-    .get(jwtVerify, getHome)
+    .route('/home')
+    .get(getHome)
 
 
 module.exports = farmerRouter
