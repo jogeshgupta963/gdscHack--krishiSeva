@@ -38,7 +38,7 @@
         <!-- Phone Number -->
         <div class="form-outline mb-4">
           <input
-            type="text"
+            type="number"
             id="typeEmailX-2"
             placeholder="Phone Number"
             class="form-control form-control-sm"
@@ -48,8 +48,9 @@
         <!-- Password -->
         <div class="form-outline mb-4">
           <input
-            type="text"
+            type="password"
             placeholder="Enter Password"
+            id="login-password"
             class="form-control form-control-sm"
           />
         </div>
@@ -60,17 +61,24 @@
         </div>
 
         <!-- Login Button -->
-        <button class="btn btn-primary btn-sm btn-block" type="submit">
+        <button
+          class="btn btn-primary btn-sm btn-block"
+          type="submit"
+          id="login-btn"
+        >
           Sign in
         </button>
         <div class="footer-text">
           <p>
             Don’t have an account?
-            <!-- <a href="/register"> Sign up</a> -->
-            <a href="register.html"> Sign up</a>
+            <a href="/api/v1/user/signup"> Sign up</a>
+            <!-- <a href="register.html"> Sign up</a> -->
           </p>
         </div>
       </form>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/login.js" type="text/javascript"></script>
   </body>
 </html>

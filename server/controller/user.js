@@ -28,12 +28,16 @@ async function postUser(req, res) {
     }
 }
 
-function login(req, res) {
+async function login(req, res) {
 
     try {
-
+        let { phoneNumber, password } = req.body;
+        // let data = await user.findOne(phoneNumber)
         res.status(200).json(req.body)
+
+
     } catch (err) {
+        console.log(err.message)
         res.status(400).json(err.message)
     }
 }
@@ -44,7 +48,7 @@ function getLogin(req, res) {
 }
 
 function getSignup(req, res) {
-    res.sendFile(path.join(__dirname, "../public/", "register.html"));
+    res.sendFile(path.join(__dirname, "../../client/register.html"))
 }
 
 module.exports = { postUser, login, getLogin, getSignup }

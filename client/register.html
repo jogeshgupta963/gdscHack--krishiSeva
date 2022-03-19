@@ -20,18 +20,18 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <!-- <link rel="stylesheet" href="/css/register.css" /> -->
-    <link rel="stylesheet" href="components/css/register.css" />
+    <link rel="stylesheet" href="/css/register.css" />
+    <!-- <link rel="stylesheet" href="components/css/register.css" /> -->
     <title>Register</title>
   </head>
   <body>
     <section class="vh-100">
-      <img src="images/login_element.png" class="login_element" alt="" />
-      <!-- <img src="img/login_element.png" class="login_element" alt="" /> -->
+      <!-- <img src="images/login_element.png" class="login_element" alt="" /> -->
+      <img src="/img/login_element.png" class="login_element" alt="" />
       <h2 class="sign_up">Sign up</h2>
       <div class="image-container">
-        <!-- <img src="img/login_bg.png" class="login_bg" alt="" /> -->
-        <img src="images/login_bg.png" class="login_bg" alt="" />
+        <img src="/img/login_bg.png" class="login_bg" alt="" />
+        <!-- <img src="images/login_bg.png" class="login_bg" alt="" /> -->
       </div>
       <form class="register-container">
         <!-- Full Name -->
@@ -40,7 +40,7 @@
             type="text"
             id="typeEmailX-2"
             placeholder="Full Name"
-            class="form-control form-control-sm"
+            class="reg-name form-control form-control-sm"
           />
         </div>
 
@@ -50,7 +50,7 @@
             type="text"
             id="typeEmailX-2"
             placeholder="Phone Number"
-            class="form-control form-control-sm"
+            class="reg-phone-number form-control form-control-sm"
           />
         </div>
 
@@ -58,16 +58,23 @@
         <div class="form-outline mb-4">
           <input
             type="text"
+            id="reg-password"
             placeholder="Enter Password"
             class="form-control form-control-sm"
           />
         </div>
 
         <!-- Register Button -->
-        <button class="btn btn-primary btn-sm btn-block" type="submit">
+        <button
+          id="reg-btn"
+          class="btn btn-primary btn-sm btn-block"
+          type="submit"
+        >
           Sign up
         </button>
       </form>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/signup.js"></script>
   </body>
 </html>
