@@ -24,9 +24,7 @@ app.use("/api/v1/farmer", farmerRouter);
 app.get("/api/v1/index", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/index.html"));
 });
-app.get("/api/v1/farmer/collaborate", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/collaborate.html"));
-});
+
 
 (async function () {
   try {
