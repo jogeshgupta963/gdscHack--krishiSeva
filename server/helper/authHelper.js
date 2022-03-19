@@ -1,18 +1,16 @@
+require('dotenv').config();
 
 
 function jwtVerify(req, res, next) {
+    // console.log(token)
     try {
         let token = req.cookies.JWT
 
         let isLoggedIn = jwt.verify(token, process.env.JWT_SECRET)
-        if (req.body != {} && isLoggedIn) {
-            req.body.user = isLoggedIn.payload;
-            next()
-        }
-        else if (isLoggedIn) {
-            req.body = isLoggedIn
+        if (isLoggedIn) {
             next();
-        } else {
+        }
+        else {
             throw new Error
         }
 
