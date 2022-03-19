@@ -54,6 +54,7 @@ body {
   color: white;
   text-align: center;
   font-size: 2em;
+  margin-bottom: -5vh;
 }
 
 /* Button Container */
@@ -64,7 +65,7 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 1;
-  margin-top: 20vh;
+  margin-top: 5vh;
 }
 
 .btn-container button {
