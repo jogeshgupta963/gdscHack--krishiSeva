@@ -1,10 +1,12 @@
 const farmer = require('../models/farmer')
 
 
-function postFarmer(req, res) {
+async function postFarmer(req, res) {
 
     try {
-        res.json(req.body)
+        let userData = req.body
+        let data = await farmer.create(userData)
+        res.status(200).json(data)
     } catch (err) {
         res.status(400).json(err.message);
     }
