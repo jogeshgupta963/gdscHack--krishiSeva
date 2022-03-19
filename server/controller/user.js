@@ -38,13 +38,13 @@ function login(req, res) {
     }
 }
 
-function getLogin(req, res){
+function getLogin(req, res) {
     // res.sendFile(path.join(__dirname,"../public/","login.html"));
-    res.sendFile(path.join(__dirname,"../../client/login.html"))
+    res.sendFile(path.join(__dirname, "../../client/login.html"))
 }
 
-function getSignup(req, res){
-    res.sendFile(path.join(__dirname,"../public/","register.html"));
+function getSignup(req, res) {
+    res.sendFile(path.join(__dirname, "../public/", "register.html"));
 }
 
-module.exports = { postUser,getLogin, getSignup }
+module.exports = { postUser, login, getLogin, getSignup }
