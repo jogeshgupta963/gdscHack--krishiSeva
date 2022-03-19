@@ -13,10 +13,10 @@ const farmerSchema = mongoose.Schema({
         type: String
     },
     budget: {
-        type: Int64
+        type: String
     },
     Rating: {
-        type: Int64
+        type: String
     },
 })
 
