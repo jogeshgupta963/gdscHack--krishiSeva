@@ -1,5 +1,5 @@
 const express = require('express')
-
+const path = require('path')
 const farmer = require('../models/farmer')
 const { postFarmer, getAllProfiles, getHome } = require('../controller/farmer.js')
 const { jwtVerify } = require('../helper/authHelper')
@@ -19,5 +19,15 @@ farmerRouter
     .route('/home')
     .get(getHome)
 
+farmerRouter
+    .route("/collaborate")
+    .get((req, res) => {
+        res.sendFile(path.join(__dirname, "../../client/collaborate.html"));
+    });
+farmerRouter
+    .route("/chat")
+    .get((req, res) => {
+        res.sendFile(path.join(__dirname, "../../client/help.html"));
+    });
 
 module.exports = farmerRouter
