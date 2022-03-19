@@ -1,18 +1,87 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan&family=Secular+One&display=swap");
 
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
 /* Main Container */
 .main-container {
-  height: 90vh;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(https://cdn.pixabay.com/photo/2017/03/28/12/00/aged-2181887_1280.jpg);
+  /* background: url(../../images/main-bg.jpeg); */
+  background: url(/img/main-bg.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-family: "League Spartan", sans-serif;
-  font-family: "Secular One", sans-serif;
+}
+
+.main-container::after {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Text Container */
+.text-container {
+  z-index: 1;
+  height: 25vh;
+}
+
+.text-container h1 {
+  font-size: 3em;
+  width: 100%;
+}
+
+.text-container h1,
+.text-container p {
+  text-align: center;
+  color: #fff;
+}
+
+/* Text */
+
+.text {
+  z-index: 1;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Button Container */
+.btn-container {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  margin-top: 20vh;
+}
+
+.btn-container button {
+  width: 80%;
+  font-size: 1.4em;
+  border-radius: 10px;
+  background-color: #0bc06c;
+  border-color: #0bc06c;
+}
+
+.btn a:active {
+  color: #fff;
+}
+
+.btn-container a {
+  color: white;
+  text-decoration: none;
 }
 
 /* Footer */
