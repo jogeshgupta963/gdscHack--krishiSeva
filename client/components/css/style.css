@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&family=Secular+One&display=swap");
+
+/* Main Container */
+.main-container {
+  height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(https://cdn.pixabay.com/photo/2017/03/28/12/00/aged-2181887_1280.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "League Spartan", sans-serif;
+  font-family: "Secular One", sans-serif;
+}
+
+/* Footer */
+footer {
+  color: white;
+  background-color: #000;
+}
