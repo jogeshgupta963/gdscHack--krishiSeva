@@ -1,3 +1,4 @@
+const path = require('path');
 const farmer = require('../models/farmer');
 const user = require('../models/user');
 
