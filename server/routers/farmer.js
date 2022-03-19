@@ -1,7 +1,8 @@
 const express = require('express')
 
 const farmer = require('../models/farmer')
-const { postFarmer } = require('../controller/farmer.js')
+const { postFarmer, getAllProfiles, getHome } = require('../controller/farmer.js')
+const { jwtVerify } = require('../helper/authHelper')
 const farmerRouter = express.Router();
 
 //@route  POST /api/v1/farmer/profile
@@ -10,9 +11,13 @@ const farmerRouter = express.Router();
 farmerRouter
     .route('/profile')
     .post(postFarmer)
-
-
-
+    .get(getAllProfiles)
+//@route  POST /api/v1/farmer/profile
+//desc to create farmer profile
+//access private
+farmerRouter
+    .route('/profile/home')
+    .get(jwtVerify, getHome)
 
 
 module.exports = farmerRouter
