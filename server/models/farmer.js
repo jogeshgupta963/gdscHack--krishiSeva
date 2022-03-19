@@ -7,13 +7,16 @@ const farmerSchema = mongoose.Schema({
         ref: 'users'
     },
     landAvailability: {
-        type: String
+        type: String,
+        required: true
     },
     location: {
-        type: String
+        type: String,
+        required: true
     },
     budget: {
-        type: String
+        type: String,
+        required: true
     },
     Rating: {
         type: String
