@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const cookieParser = require('cookie-parser')
 require("dotenv").config();
 
 //functions
@@ -8,7 +9,7 @@ const connect = require("./server/dbConnection/connect");
 const app = express();
 
 app.use(express.json());
-
+app.use(cookieParser());
 app.use("/css", express.static(__dirname + "/client/components/css"));
 app.use("/js", express.static(__dirname + "/client/components/js"));
 app.use("/img", express.static(__dirname + "/client/images"));
