@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 
 function connect(url) {
     try {
-        return mongoose.connect(url, {
-            newUrlParser: true,
-            newUnifiedTopology: true
-        })
+        return mongoose.connect(url)
     } catch (err) {
         console.log(err.message);
     }
