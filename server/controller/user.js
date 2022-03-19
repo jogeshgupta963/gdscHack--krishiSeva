@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 require('dotenv').config();
 const user = require('../models/user')
+const path = require('path')
 
 
 async function postUser(req, res) {
@@ -30,10 +31,20 @@ async function postUser(req, res) {
 function login(req, res) {
 
     try {
+
         res.status(200).json(req.body)
     } catch (err) {
         res.status(400).json(err.message)
     }
 }
 
-module.exports = { postUser }
+function getLogin(req, res){
+    // res.sendFile(path.join(__dirname,"../public/","login.html"));
+    res.sendFile(path.join(__dirname,"../../client/login.html"))
+}
+
+function getSignup(req, res){
+    res.sendFile(path.join(__dirname,"../public/","register.html"));
+}
+
+module.exports = { postUser,getLogin, getSignup }
