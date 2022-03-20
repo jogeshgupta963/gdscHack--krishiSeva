@@ -27,6 +27,9 @@ app.get("/api/v1/index", (req, res) => {
 app.get("/api/v1/farmer/collaborate", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/collaborate.html"));
 });
+app.get("/api/v1/farmer/loan", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/loan.html"));
+});
 
 (async function () {
   try {

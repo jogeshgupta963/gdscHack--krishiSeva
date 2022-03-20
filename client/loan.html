@@ -11,41 +11,65 @@
       crossorigin="anonymous"
     />
     <!-- <link rel="stylesheet" href="components/css/home.css" /> -->
-    <link rel="stylesheet" href="/css/home.css" />
-    <title>Home</title>
+    <link rel="stylesheet" href="/css/collaborate.css" />
+    <title>Loan</title>
   </head>
   <body>
     <header>
       <h1>Krishi Sewa</h1>
       <img src="/img/profile_header.png" class="login_element" alt="" />
     </header>
-    <div class="container">
-      <div class="product-card home">
-        <img src="/img/collaborate.jpeg" alt="" />
+    <section class="container">
+      <div class="box">
+        <div class="left">
+          <img src="/img/loan1.png" alt="" style="margin-left: 20px" />
+          <img src="/img/rating.png" alt="" />
+          <!--  <img src="images/rating.png" alt="" /> -->
+        </div>
+
+        <div class="right">
+          <h3>Union Bank</h3>
+          <h4>Interest Rate: 7.25%</h4>
+          <h4>Organization: Govt.</h4>
+          <button type="button" class="btn btn-warning">View Details</button>
+        </div>
       </div>
 
-      <div class="product-card collaborate">
-        <img src="/img/collaborate.jpeg" alt="" />
+      <div class="box">
+        <div class="left">
+          <img src="/img/loan2.png" alt="" style="margin-left: 20px" />
+          <img src="/img/rating.png" alt="" />
+          <!--  <img src="images/rating.png" alt="" /> -->
+        </div>
+
+        <div class="right">
+          <h3>ICICI Bank</h3>
+          <h4>Interest Rate: 7.25%</h4>
+          <h4>Organization: Pvt.</h4>
+          <button type="button" class="btn btn-warning">View Details</button>
+        </div>
       </div>
 
-      <div class="product-card loan">
-        <img src="/img/collaborate.jpeg" alt="" />
-      </div>
-      <div class="product-card help">
-        <img src="/img/collaborate.jpeg" alt="" />
-      </div>
-    </div>
+      <div class="box">
+        <div class="left">
+          <img src="/img/loan3.png" alt="" style="margin-left: 20px" />
+          <img src="/img/rating.png" alt="" />
+          <!--  <img src="images/rating.png" alt="" /> -->
+        </div>
+
+        <div class="right">
+          <h3>NABARD</h3>
+          <h4>Interest Rate: 7.25%</h4>
+          <h4>Organization: Govt.</h4>
+          <button type="button" class="btn btn-warning">View Details</button>
+        </div>
+    </section>
     <footer class="page-footer font-small blue fixed-bottom">
       <div class="icons">
         <a href="/api/v1/farmer/home">
           <!-- <img src="images/home_icon.png" alt="" /> -->
-          <img
-            src="/img/home_icon.png"
-            alt=""
-            style="filter: brightness(0.3)"
-          />
+          <img src="/img/home_icon.png" alt="" />
         </a>
-
         <a href="/api/v1/farmer/collaborate">
           <!-- <img src="images/collaborate_icon.png" /> -->
           <img src="/img/collaborate_icon.png" alt="" />
@@ -53,7 +77,11 @@
 
         <a href="/api/v1/farmer/loan">
           <!-- <img src="images/loan_icon.png" /> -->
-          <img src="/img/loan_icon.png" alt="" />
+          <img
+            src="/img/loan_icon.png"
+            alt=""
+            style="filter: brightness(0.3)"
+          />
         </a>
         <a href="/api/v1/farmer/help">
           <!-- <img src="images/help_icon.png" /> -->
