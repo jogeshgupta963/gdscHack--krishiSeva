@@ -25,6 +25,7 @@ app.get("/api/v1/index", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/index.html"));
 });
 
+
 (async function () {
   try {
     await connect(process.env.mongoUri);
