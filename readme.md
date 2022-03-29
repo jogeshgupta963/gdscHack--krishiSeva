@@ -1,6 +1,6 @@
 # Krishi Seva 
 
-<p>Our Team HTML5 created Krishi Seva as a prototype for Digital Village Hackathon - A 24 hour hackathon organsied by GDSC , Thapar University , Patiala </p>
+<p>Our Team HTML5 created Krishi Seva as a prototype for Digital Village Hackathon - A 24 hour hackathon organsied by GDSC , Thapar University , Patiala where we were the winners of the best first year hack </p>
 <p> The theme of the whole hackahton was Precision Agriculture and all the problem statements were based on devolping the persisting technology in P.A even more but their was no focus on its Implementation so we choose to work under Open-Innovation category to solve this challenge. </p>
 
 ## Challenges in adopting Precision Agriculture in India :
@@ -25,4 +25,6 @@ The major reasons for this are lack of awareness and illiteracy in farmers. Othe
   **HTML5 has created *Krishi Sewa* to bring the solution to this problem.**
   <br>
   **Krishi Sewa - Improving agriculture, improving lives.**
+  
+
   
