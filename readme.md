@@ -23,6 +23,6 @@
 Countries like the US, UK, and Denmark make the most out of PA but in developing countries like India (where agriculture contributes to almost 20% of the GDP !!), this method of farming is still not used at the scale at which it should be used.
 The major reasons for this are lack of awareness and illiteracy in farmers. Other factors include lack of capital, infrastructure, and trust of farmers in technologies used in PA (over the use  of combines and tractors)
 
-    HTML5 has created *Krishi Sewa* to bring the solution to this problem.</p>
+    HTML5 has created *Krishi Sewa* to bring the solution to this problem. </p>
   **Krishi Sewa - Improving agriculture, improving lives.**
   
