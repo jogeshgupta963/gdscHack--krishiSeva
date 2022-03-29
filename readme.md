@@ -16,7 +16,6 @@
   <li>Loan facilities to buy the equipment (At minimum interest rates possible by collaborating with government and different non-profit organizations)</li>
   <li>Motivating the middlemen to bring farming into precision farming in exchange for incentives for each successful implementation in a farm. (As they are the only ones who can bring the trust of farmers over PA and ca n provide loans easily and rapidly to them)</li>
   
-  
 ## Conclusion : 
   <p>No matter how much we develop technology in the domain of precision agriculture, It will be useless if we aren't able to implement it on ground level.
 
@@ -24,5 +23,6 @@ Countries like the US, UK, and Denmark make the most out of PA but in developing
 The major reasons for this are lack of awareness and illiteracy in farmers. Other factors include lack of capital, infrastructure, and trust of farmers in technologies used in PA (over the use  of combines and tractors)</p>
 
   **HTML5 has created *Krishi Sewa* to bring the solution to this problem.**
+  <br>
   **Krishi Sewa - Improving agriculture, improving lives.**
   
