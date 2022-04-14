@@ -14,7 +14,7 @@
 
 
 [Check On Devfolio](https://devfolio.co/projects/krishi-seva-e174) <!-- TODO: Remove on your copy of this template.-->
-[Get Started](#KrishiSeva) <!-- TODO: Use ID of your homepage heading -->
+[Get Started](./) <!-- TODO: Use ID of your homepage heading -->
 
 <!-- TODO: Set your background color or image. -->
-![color](#b3d9f8)
+![color](red)

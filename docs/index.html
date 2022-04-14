@@ -7,10 +7,12 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <title>DocsifyJS Template</title> <!-- TODO: Update. -->
+    <title>Krishi Seva</title> <!-- TODO: Update. -->
     <meta name="description"
         content="Documentation for the DocsifyJS Template project for making your own DocsifyJS docs site">
     <!-- TODO: Update. -->
+    <link rel="icon" type="image/x-icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNQN2HArMSErRhvvB4C7xOv8CWcg-49SwHIQ&usqp=CAU">
 
     <!-- Theme: Defaults -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css">
@@ -19,7 +21,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
     <style>
         :root {
-            --cover-background-color:#ADD8E6;
+            --cover-background-color: #ADD8E6;
+            --navbar-root-margin: 0 0 0 2rem;
+            --cover-button-color: #0ac06c;
+            --cover-background-color: #E0FFFF;
         }
     </style>
 
@@ -28,9 +33,15 @@
         section.cover.show {
             height: 100%;
         }
-        #cover-heading{
+
+        #cover-heading {
             color: black;
             font-weight: bold;
+        }
+
+        .nav-item {
+            margin: 1em;
+            /* border: 2px solid red; */
         }
     </style>
 
@@ -50,7 +61,7 @@
 
     <script>
         var repoUrl = "https://github.com/jogeshgupta963/gdscHack--krishiSeva"; // TODO: Update.
-        var editPath = repoUrl + "/blob/master/docs/";
+        var editPath = repoUrl + "/blob/master/readme.md";
         var editMsg = "📝 Edit on GitHub";
 
         window.$docsify = {
@@ -60,12 +71,14 @@
             auto2top: true,
             coverpage: true,
             loadSidebar: false,
+            loadNavbar: true,
             subMaxLevel: 2,
             themeColor: "#0ac06c", // TODO: Set your own color.
             plugins: [
                 EditOnGithubPlugin.create(editPath, null, editMsg)
             ],
-            subMaxLevel: 2
+            subMaxLevel: 2,
+            onlyCover: true,
         }
 
     </script>
