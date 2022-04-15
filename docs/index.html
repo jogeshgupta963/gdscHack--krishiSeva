@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Krishi Seva</title> <!-- TODO: Update. -->
+    <meta name="description"
+        content="Documentation for the DocsifyJS Template project for making your own DocsifyJS docs site">
+    <!-- TODO: Update. -->
+    <link rel="icon" type="image/x-icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNQN2HArMSErRhvvB4C7xOv8CWcg-49SwHIQ&usqp=CAU">
+
+    <!-- Theme: Defaults -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css">
+     -->
+    <!-- Theme: Simple -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+    <style>
+        :root {
+            --cover-background-color: #ADD8E6;
+            --navbar-root-margin: 0 0 0 2rem;
+            --cover-button-color: #0ac06c;
+            --cover-background-color: #E0FFFF;
+        }
+    </style>
+
+    <style>
+        /* Fix issue on mobile devices where a custom cover image goes off the screen. */
+        section.cover.show {
+            height: 100%;
+        }
+
+        #cover-heading {
+            color: black;
+            font-weight: bold;
+        }
+
+        .nav-item {
+            margin: 1em;
+            /* border: 2px solid red; */
+        }
+    </style>
+
+    <!-- Edit on GitHub plugin. -->
+    <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+
+    <!-- Docsify core. -->
+    <script defer src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <!-- Syntax highlighting.-->
+    <!-- TODO: Add prism-bash, prism-python, prism-javascript etc. as separate items so you can load syntax highlighting for that language. -->
+    <script defer src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
+
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        var repoUrl = "https://github.com/jogeshgupta963/gdscHack--krishiSeva"; // TODO: Update.
+        var editPath = repoUrl + "/blob/master/readme.md";
+        var editMsg = "📝 Edit on GitHub";
+
+        window.$docsify = {
+            name: "Krishi Seva", // TODO: Update.
+            repo: repoUrl,
+
+            auto2top: true,
+            coverpage: true,
+            loadSidebar: false,
+            loadNavbar: true,
+            subMaxLevel: 2,
+            themeColor: "#0ac06c", // TODO: Set your own color.
+            plugins: [
+                EditOnGithubPlugin.create(editPath, null, editMsg)
+            ],
+            subMaxLevel: 2,
+            onlyCover: true,
+        }
+
+    </script>
+
+</body>
+
+</html>
