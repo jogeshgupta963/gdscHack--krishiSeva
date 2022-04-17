@@ -59,7 +59,9 @@ async function getFarmerProfileById(req,res){
     res.status(400).json({status:false,msg:err.message})
   }
 }
-
+//@Route   /api/v1/profile/:_id
+//@desc    PUT to update farmerProfile by id
+//@access  private
 async function updateFarmerProfile(req,res){
   
   try {
@@ -82,5 +84,18 @@ async function updateFarmerProfile(req,res){
     res.status(400).json({status:false,msg:err.message})
   }
 }
+//@Route   /api/v1/profile/
+//@desc    DELETE to get  farmerProfile by id
+//@access  private
+async function deleteFarmerProfile(req,res){
+  try {
 
-module.exports ={createFarmerProfile,getAllFarmerProfile,getFarmerProfileById ,updateFarmerProfile }
+    const deleteProfile = await Farmer.findOneAndDelete( {user:req.user._id})
+    
+    res.status(200).json({status:false,msg:"profile deleted"})
+  } catch (err) {
+    res.status(400).json({status:false,msg:err.message})
+  }
+}
+
+module.exports ={createFarmerProfile,getAllFarmerProfile,getFarmerProfileById ,updateFarmerProfile,deleteFarmerProfile }

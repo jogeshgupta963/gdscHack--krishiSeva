@@ -1,6 +1,6 @@
 const express = require('express')
 
-const {createFarmerProfile,getAllFarmerProfile,getFarmerProfileById,updateFarmerProfile} = require('../controller/farmer')
+const {createFarmerProfile,getAllFarmerProfile,getFarmerProfileById,updateFarmerProfile,deleteFarmerProfile} = require('../controller/farmer')
 const {jwtVerify} = require('../middleware/authHelper')
 
 const farmerRouter = express.Router();
@@ -13,6 +13,7 @@ farmerRouter
 .route('/')
 .post(jwtVerify,createFarmerProfile)
 .get(getAllFarmerProfile)
+.delete(jwtVerify,deleteFarmerProfile)
 
 farmerRouter
 .route('/:_id')
