@@ -9,7 +9,7 @@ const userSchema = mongoose.Schema({
         required: true
     },
     phoneNumber: {
-        type: String,
+        type: Number,
         maxLength: 10,
         required: true
     },
@@ -18,7 +18,12 @@ const userSchema = mongoose.Schema({
         minLength: 8,
         required: true
     },
+    designation:{
+        type:String,
+        enum:["Farmer","Expert","Middlemen"],
+        default:"Farmer"
+    }
 })
 
-const user = mongoose.model('user', userSchema)
-module.exports = user
+const User = mongoose.model('User', userSchema)
+module.exports = User
