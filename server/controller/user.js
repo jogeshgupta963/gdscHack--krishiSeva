@@ -4,25 +4,33 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
 require('dotenv').config();
-const user = require('../models/user')
+const User = require('../models/User')
 const path = require('path');
 
-async function postUser(req, res) {
+async function signupUser(req, res) {
 
     try {
         let userData = req.body
+
+        //checking if user exists already
+
+        const isExist = await User.findOne({phoneNumber:userData.phoneNumber})
+
+        if(isExist){
+            return res.status(400).json({status:false,msg:"user already registered"})
+        }
         //hashing password
         let salt = await bcrypt.genSalt();
         let hashedString = await bcrypt.hash(userData.password, salt.toString());
         userData.password = hashedString;
         //creating user
-        let farmer = await user.create(userData)
+        let farmer = await User.create(userData)
         //creating jwt
 
-        const JWT = jwt.sign({ payload: farmer._id }, process.env.JWT_SECRET, { expiresIn: 3600 })
+        const JWT = jwt.sign({ user: farmer._id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRESIN,})
 
-        res.cookie("JWT", JWT, { httpOnly: true })
-        res.status(200).json(JWT)
+        res.cookie("JWT", JWT)
+        res.status(200).json({status:true,msg:"user registered"})
     } catch (err) {
         res.status(400).json(err.message);
     }
@@ -32,20 +40,20 @@ async function login(req, res) {
 
     try {
         let { phoneNumber, password } = req.body;
-        let data = await user.findOne({ phoneNumber })
+        let data = await User.findOne({ phoneNumber })
 
         if (!data) {
-            return res.status(400).json({ type: "failed", msg: "Invalid Credentials" })
+            return res.status(400).json({ status:false, msg: "Invalid Credentials" })
         }
         let matchPass = await bcrypt.compare(password, data.password)
         if (!matchPass) {
-            return res.status(400).json({ type: "failed", msg: "Invalid Credentials" })
+            return res.status(400).json({ status:false, msg: "Invalid Credentials" })
         }
-        const JWT = jwt.sign({ payload: data._id }, process.env.JWT_SECRET, { expiresIn: 60 })
-        res.cookie("JWT", JWT, { httpOnly: true })
-        // res.status(200).json(JWT)
+        const JWT = jwt.sign({ user: data._id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRESIN })
+        res.cookie("JWT", JWT)
         res.status(200).json({
-            type: "success",
+            status:true,
+            msg:"user logged in"
         })
 
     } catch (err) {
@@ -54,13 +62,13 @@ async function login(req, res) {
     }
 }
 
-function getLogin(req, res) {
-    // res.sendFile(path.join(__dirname,"../public/","login.html"));
-    res.sendFile(path.join(__dirname, "../../client/login.html"))
-}
+// function getLogin(req, res) {
+//     // res.sendFile(path.join(__dirname,"../public/","login.html"));
+//     res.sendFile(path.join(__dirname, "../../client/login.html"))
+// }
 
-function getSignup(req, res) {
-    res.sendFile(path.join(__dirname, "../../client/register.html"))
-}
+// function getSignup(req, res) {
+//     res.sendFile(path.join(__dirname, "../../client/register.html"))
+// }
 
-module.exports = { postUser, login, getLogin, getSignup }
+module.exports = { signupUser, login }

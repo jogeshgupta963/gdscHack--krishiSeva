@@ -1,31 +1,22 @@
-const express = require("express");
-const path = require("path");
-const farmer = require("../models/farmer");
-const {
-  postFarmer,
-  getAllProfiles,
-  getHome,
-} = require("../controller/farmer.js");
-const { jwtVerify } = require("../helper/authHelper");
+const express = require('express')
+
+const {createFarmerProfile,getAllFarmerProfile,getFarmerProfileById,updateFarmerProfile} = require('../controller/farmer')
+const {jwtVerify} = require('../middleware/authHelper')
+
 const farmerRouter = express.Router();
 
-//@route  POST /api/v1/farmer/profile
-//desc to create farmer profile
-//access private
-farmerRouter.route("/profile").post(postFarmer).get(getAllProfiles);
-//@route  POST /api/v1/farmer/profile
-//desc to create farmer profile
-//access private
-farmerRouter.route("/home").get(getHome);
+//@Route   /api/v1/profile
+//@desc    Post create profile
+//@access  Private
 
-farmerRouter.route("/collaborate").get((req, res) => {
-  res.sendFile(path.join(__dirname, "../../client/collaborate.html"));
-});
-farmerRouter.route("/chat").get((req, res) => {
-  res.sendFile(path.join(__dirname, "../../client/help.html"));
-});
-farmerRouter.route("/loan").get((req, res) => {
-  res.sendFile(path.join(__dirname, "../../client/loan.html"));
-});
+farmerRouter
+.route('/')
+.post(jwtVerify,createFarmerProfile)
+.get(getAllFarmerProfile)
 
-module.exports = farmerRouter;
+farmerRouter
+.route('/:_id')
+.get(getFarmerProfileById)
+.put(jwtVerify,updateFarmerProfile)
+
+module.exports = farmerRouter

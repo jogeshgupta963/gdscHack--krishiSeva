@@ -4,7 +4,7 @@ const farmerSchema = mongoose.Schema({
 
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'users'
+        ref: 'User'
     },
     landAvailability: {
         type: String,
@@ -18,10 +18,10 @@ const farmerSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    Rating: {
-        type: String
+    rating: {
+        type: Number
     },
 })
 
-const farmer = mongoose.model('farmer', farmerSchema)
-module.exports = farmer
+const Farmer = mongoose.model('Farmer', farmerSchema)
+module.exports = Farmer

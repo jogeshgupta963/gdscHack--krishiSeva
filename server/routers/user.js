@@ -1,7 +1,7 @@
 const express = require('express')
 
-const user = require('../models/user')
-const { postUser, login, getLogin, getSignup } = require('../controller/user.js')
+// const user = require('../models/user')
+const { signupUser, login } = require('../controller/user.js')
 const userRouter = express.Router();
 
 //@route  POST /api/v1/user/signup
@@ -9,14 +9,16 @@ const userRouter = express.Router();
 //access public
 userRouter
     .route('/signup')
-    .get(getSignup)
-    .post(postUser)
+    // .get(getSignup)
+    .post(signupUser)
+
+    
 //@route  POST /api/v1/user/login
 //desc to login
 //access public
 userRouter
     .route('/login')
-    .get(getLogin)
+    // .get(getLogin)
     .post(login)
 
 

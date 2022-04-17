@@ -18,7 +18,7 @@ const userRouter = require("./server/routers/user.js");
 const farmerRouter = require("./server/routers/farmer.js");
 
 app.use("/api/v1/user", userRouter);
-app.use("/api/v1/farmer", farmerRouter);
+app.use("/api/v1/profile", farmerRouter);
 
 //db connection
 app.get("/api/v1/index", (req, res) => {
