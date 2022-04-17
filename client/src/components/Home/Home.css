@@ -139,7 +139,8 @@ body {
   color: #FFFFFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-span{
+
+span {
   color: #e7d7c1;
 }
 
@@ -149,7 +150,11 @@ span{
 
 #card-1 img:hover {
   /* border: 4px solid red; */
-  opacity: 70%;
+  /* opacity: 70%; */
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  border-radius: 5%;
 }
 
 #card-2 {
@@ -157,8 +162,10 @@ span{
 }
 
 #card-2 img:hover {
-  /* border: 4px solid red; */
-  opacity: 70%;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  border-radius: 5%;
 }
 
 #card-3 {
@@ -166,6 +173,12 @@ span{
 }
 
 #card-3 img:hover {
-  /* border: 4px solid red; */
-  opacity: 70%;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  border-radius: 5%;
+}
+
+.bg_color {
+  background: #0BC06C;
 }
