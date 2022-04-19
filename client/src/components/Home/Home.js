@@ -26,14 +26,17 @@ function LandingPage() {
                   <div class="card-body text-center" id='card-body-1'>
                     <h4 class="card-title text-light">Middleman</h4>
                     {/* Card hover effect */}
-                    <div className="overlay" id='card-hover-1'>
+                    <div className="overlay justify-content-center align-items-center" id='card-hover-1'>
                       <div className="items"></div>
                       <div className="items head">
                         {/* <h1 className='text-center m-0 desc'>lorem ipsum</h1> */}
                       </div>
-                      <div className="items price my-0 row justify-content-center align-items-center px-md-4 mx-md-4 mx-4 my-md-5 my-4">
-                        <p className="btn btn-success rounded card-buttons mx-5 mt-5" id='login-btn'>Login</p>
-                        <p className="btn btn-success rounded card-buttons mx-2" id='signup-btn'>SignUp</p>
+                      <div className="items price my-0 row justify-content-center align-items-center cardBox">
+                        <p className='text-white hover-card-text text-center m-1'>le jogi khush hai na ab ? aur kuch krna bcha hai toh btaade!</p>
+                        <div className='text-center button-container row justify-content-center'>
+                          <p className="btn btn-success col-5 col-lg-4 rounded card-buttons m-2 p-md-1 mx-2 btn-sm p-0 " id='login-btn'>Login</p>
+                          <p className="btn btn-success col-6 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0" id='signup-btn'>Sign up</p>
+                        </div>
                       </div>
                       <div className="items cart">
                         {/* <i className="fa fa-shopping-cart"></i> */}
@@ -56,9 +59,12 @@ function LandingPage() {
                       <div className="items head">
                         {/* <h1 className='text-center m-0 desc'>lorem ipsum</h1> */}
                       </div>
-                      <div className="items price my-0 row justify-content-center align-items-center px-md-4 mx-md-4 mx-3 my-md-5 my-3">
-                        <p className="btn btn-success rounded card-buttons mx-2 mt-5" id='login-btn'>Login</p>
-                        <p className="btn btn-success rounded card-buttons mx-2" id='signup-btn'>SignUp</p>
+                      <div className="items price my-0 row justify-content-center align-items-center cardBox">
+                        <p className='text-white hover-card-text text-center m-1'>le jogi khush hai na ab ? aur kuch krna bcha hai toh btaade!</p>
+                        <div className='text-center button-container row justify-content-center'>
+                          <p className="btn btn-success col-5 col-lg-4 rounded card-buttons m-2 p-md-1 mx-2 btn-sm p-0 " id='login-btn'>Login</p>
+                          <p className="btn btn-success col-6 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0" id='signup-btn'>Sign up</p>
+                        </div>
                       </div>
                       <div className="items cart">
                         {/* <i className="fa fa-shopping-cart"></i> */}
@@ -81,9 +87,12 @@ function LandingPage() {
                       <div className="items head">
                         {/* <h1 className='text-center m-0 desc'>lorem ipsum</h1> */}
                       </div>
-                      <div className="items price my-0 row justify-content-center align-items-center px-md-4 mx-md-4 mx-3 my-md-5 my-3">
-                        <p className="btn btn-success rounded card-buttons mx-2 mt-5" id='login-btn'>Login</p>
-                        <p className="btn btn-success rounded card-buttons mx-2" id='signup-btn'>SignUp</p>
+                      <div className="items price my-0 row justify-content-center align-items-center cardBox">
+                        <p className='text-white hover-card-text text-center m-1'>le jogi khush hai na ab ? aur kuch krna bcha hai toh btaade!</p>
+                        <div className='text-center button-container row justify-content-center'>
+                          <p className="btn btn-success col-5 col-lg-4 rounded card-buttons m-2 p-md-1 mx-2 btn-sm p-0 " id='login-btn'>Login</p>
+                          <p className="btn btn-success col-6 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0" id='signup-btn'>Sign up</p>
+                        </div>
                       </div>
                       <div className="items cart">
                         {/* <i className="fa fa-shopping-cart"></i> */}

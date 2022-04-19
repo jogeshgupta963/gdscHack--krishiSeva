@@ -168,7 +168,7 @@ span {
   /* display: grid; */
   /* grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 2fr 1fr; */
-  background-color: rgb(11, 192, 108, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   transition: all 0.5s;
   font-family: "Playfair Display", serif;
@@ -220,10 +220,6 @@ span {
   transform: translateY(0px);
 }
 
-/* .card:hover .overlay hr {
-  transition-delay: 0.4s;
-} */
-
 .card:hover .overlay .price {
   transform: translateY(0px);
   transition-delay: 0.3s;
@@ -231,6 +227,18 @@ span {
 }
 
 .card-buttons {
-  /* width: 7em; */
   text-align: center;
+}
+
+/* .hover-card-box{
+padding: 3em;
+} */
+.hover-card-text {
+  font-family: "popins";
+}
+.cardBox{
+  height: 100%;
+}
+button{
+  font-size: 5em;
 }
