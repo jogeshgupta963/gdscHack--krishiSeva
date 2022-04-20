@@ -8,10 +8,10 @@ function LandingPage() {
     <Fragment>
 
 
-      <Navbar />
       <div className="main-container container-fluid justify-content-center align-itmes-center">
         <div className='row justify-content-center align-items-center'>
-          <div className="col-12 col-md-8 text-center mt-5 mt-md-0">
+      < Navbar/>
+          <div className="col-12 col-md-8 text-center mt-5 mt-md-5">
             <h1 className='display-1 fw-bolder' id='heading'>Krishi<span>Seva</span></h1>
             <p id='tagline'>Improving agriculture, improving lives</p>
           </div>
@@ -21,7 +21,7 @@ function LandingPage() {
             <div className='row align-items-center justify-content-center justify-content-lg-between'>
 
               {/* card -1 */}
-              <div class="col-6 my-3 mt-1 col-md-4 col-lg-3 option" id='card-1'>
+              <div class="col-6 my-3 col-md-4 col-lg-3 option" id='card-1'>
                 <div class="card border-0 bg_color">
                   <div class="card-body text-center" id='card-body-1'>
                     <h4 class="card-title text-light">Middleman</h4>
