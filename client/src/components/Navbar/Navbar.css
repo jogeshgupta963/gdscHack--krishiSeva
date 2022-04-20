@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=inter");
+/* @import url("https://fonts.googleapis.com/css?family=inter");
 
 .main-nav {
     height: 50px;
@@ -106,4 +106,21 @@
       color: #55b28a;
     }
   }
-  
+   */
+
+#main-nav li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s linear 0s;
+}
+
+#navbarrr {
+  background-color: rgba(249, 249, 249, 0.8);
+}
+/* 
+@media only screen and (max-width: 768px) {
+  #navbarrr {
+    background-color: none;
+  }
+} */
