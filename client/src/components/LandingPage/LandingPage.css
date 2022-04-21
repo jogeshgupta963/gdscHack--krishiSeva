@@ -1,0 +1,33 @@
+body {
+    background-image: url("https://i.ibb.co/VTVQ0LX/expert-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80% 60%;
+    height: 100vh;
+    width: 100%;
+    color: white;
+}
+
+#main_text_box-1,
+#main_text_box-2 {
+    width: 35%;
+    background: rgba(20, 1, 1, 0.473);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#button-box a {
+    border-radius: 0;
+}
+
+#btn-1 {
+    background-color: #9D695A;
+}
+
+#btn-2 {
+    background-color: transparent;
+    border: 4px solid #9D695A;
+}

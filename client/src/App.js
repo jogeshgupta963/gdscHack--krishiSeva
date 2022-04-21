@@ -1,5 +1,5 @@
 import {Fragment} from 'react'
-import Home from './components/Home/Home.js'
+import Home from './components/LandingPage/LandingPage'
 import Login from './components/Auth/Login/Login.js';
 import Navbar from './components/Navbar/Navbar.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
