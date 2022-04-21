@@ -5,7 +5,34 @@ body {
     background-position: 80% 60%;
     height: 100vh;
     width: 100%;
+    /* backface-visibility: hidden; */
     color: white;
+    animation: slideBg 8s infinite 8s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideBg {
+    0% {
+        background-image: url("https://i.ibb.co/VTVQ0LX/expert-bg.jpg");
+        /* background-position: 80% 60%; */
+    }
+
+    25% {
+        background-image: url("https://i.ibb.co/XZ5yR1m/collaborate-bg.jpg");
+        /* background-position: 60% 60%; */
+        background-size: cover;
+    }
+
+    50% {
+        background-image: url("https://i.ibb.co/h24WkTk/laon-bg.jpg");
+        /* background-position: 11% 60%; */
+        background-size: cover;
+    }
+
+    100% {
+        /* background-size: cover; */
+        background-image: url("https://www.mahindra.com/assets/cms-images/news-room/mahindrarise-75/mahindra-agri-helping-farmers-688x278.jpg");
+    }
 }
 
 #main_text_box-1,

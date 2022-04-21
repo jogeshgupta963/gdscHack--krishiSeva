@@ -1,9 +1,11 @@
 import React from 'react'
 import './LandingPage.css'
+import Navbar from '../Navbar/Navbar'
 function LandingPage() {
   return (
 
 <div class="container-lg main-container">
+< Navbar/>
   {/* < img src = 'https://i.ibb.co/r4mq8nd/agrigator-digital-farming-platform-pic-ds1-1.jp' > </img> */}
             <div class="position-absolute top-50 start-0 translate-middle-y mx-md-5 mx-3 d-none d-md-block p-3" id="main_text_box-1">
                 <h1>Lorem ipsum</h1>
