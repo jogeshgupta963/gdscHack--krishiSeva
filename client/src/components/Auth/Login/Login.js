@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react'
+import Navbar from '../../Navbar/Navbar'
 import './Login.css'
 function Login() {
   return (
     <Fragment>
+
+
+      <Navbar/>
         <section class="vh-100">
       {/* <!-- <img src="images/login_element.png" class="login_element" alt="" /> --> */}
       <img src="/img/login_element.png" class="login_element" alt="" />
