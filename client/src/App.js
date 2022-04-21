@@ -15,13 +15,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
           </Routes>
-          <section className="container">
+          
             {/* <Alert /> */}
             <Routes>
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/home" element={<Home />} />
             </Routes>
-          </section>
+          
 
         </Fragment>
       </Router >
