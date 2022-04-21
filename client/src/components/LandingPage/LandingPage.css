@@ -25,9 +25,18 @@ body {
 
 #btn-1 {
     background-color: #9D695A;
+    transition: 0.5s;
 }
 
 #btn-2 {
     background-color: transparent;
     border: 4px solid #9D695A;
+}
+
+#btn-1:hover {
+    background-color: #b0877b;
+}
+
+#btn-2:hover {
+    background-color: #9D695A;
 }
