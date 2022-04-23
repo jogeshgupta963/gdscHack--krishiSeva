@@ -10,13 +10,6 @@ function LandingPage() {
 < Navbar/>
   {/* < img src = 'https://i.ibb.co/r4mq8nd/agrigator-digital-farming-platform-pic-ds1-1.jp' > </img> */}
             <div class="position-absolute top-50 start-0 translate-middle-y mx-md-5 mx-3 d-none d-md-block p-3" id="main_text_box-1">
-<div id="myCarousel" class="carousel container slide">
-<div class="carousel-inner">
-        <div class="active item one"></div>
-        <div class="item two"></div>
-        <div class="item three"></div>
-</div>
-</div>
                 <h1>Lorem ipsum</h1>
                 Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Molestias eveniet ut, maxime
@@ -45,11 +38,7 @@ function LandingPage() {
     </div>
   )
 }
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.carousel').carousel({interval: 7000});
-  });
-</script>
+
 
 
 export default LandingPage
