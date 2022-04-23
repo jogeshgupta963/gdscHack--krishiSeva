@@ -144,7 +144,7 @@ function LandingPage() {
                         </p>
                         <div className="text-center button-container row justify-content-center">
                           <p
-                            className="btn btn-success col-5 col-lg-4 rounded card-buttons p-md-1 mx-2 btn-sm p-0 mb-1"
+                            className="btn btn-success col-5 col-lg-4 rounded card-buttons  m-2 p-md-1 mx-2 btn-sm p-0"
                             id="login-btn"
                           >
                             <Link to="/login"className="linkk">Login</Link>
