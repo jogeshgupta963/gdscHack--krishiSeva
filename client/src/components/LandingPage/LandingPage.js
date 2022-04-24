@@ -19,7 +19,7 @@ function LandingPage() {
                 voluptatem dolorem placeat culpa officia?
                 
               <div id = "button-box">
-                <Link to ="#" className='btn text-light mt-4 me-3' id='btn-1'>Get Started</Link>
+                <Link to ="/home" className='btn text-light mt-4 me-3' id='btn-1'>Get Started</Link>
                 <Link to ="#" className='btn mt-3 mt-lg-4 text-light' id='btn-2'>Learn More</Link>
               </div>
             </div>
