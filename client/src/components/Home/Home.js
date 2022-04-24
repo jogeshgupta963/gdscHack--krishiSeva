@@ -6,9 +6,9 @@ import Navbar from "../Navbar/Navbar";
 function LandingPage() {
   return (
     <Fragment>
+      <Navbar />
       <div className="main-container container-fluid justify-content-center align-itmes-center">
         <div className="row justify-content-center align-items-center">
-          <Navbar />
           <div className="col-12 col-md-8 text-center mt-5 mt-md-5">
             <h1 className="display-1 fw-bolder" id="heading">
               Krishi<span>Seva</span>
@@ -22,7 +22,7 @@ function LandingPage() {
             I am a:
           </h1>
 
-          <div className="card-container col-md-10 col-12 ">
+          <div className="card-container col-md-10 col-12 mt-md-5">
             <div className="row align-items-center justify-content-center justify-content-lg-between">
               {/* card -1 */}
               <div class="col-6 my-3 col-md-4 col-lg-3 option" id="card-1">
@@ -48,13 +48,13 @@ function LandingPage() {
                             className="btn btn-success col-5 col-lg-4 rounded card-buttons m-2 p-md-1 mx-2 btn-sm p-0 "
                             id="login-btn"
                           >
-                            <Link to="/login">Login</Link>
+                            <Link to="/login"className="linkk">Login</Link>
                           </p>
                           <p
-                            className="btn btn-success col-6 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0"
+                            className="btn btn-success col-7 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0"
                             id="signup-btn"
                           >
-                            <Link to="/register">Sign up</Link>
+                            <Link to="/register" className="linkk">Sign up</Link>
                           </p>
                         </div>
                       </div>
@@ -79,7 +79,10 @@ function LandingPage() {
                   <div class="card-body text-center">
                     <h4 class="card-title text-light">Farmer</h4>
                     {/* Card hover effect */}
-                    <div className="overlay" id="card-hover-1">
+                    <div
+                      className="overlay justify-content-center align-items-center"
+                      id="card-hover-1"
+                    >
                       <div className="items"></div>
                       <div className="items head">
                         {/* <h1 className='text-center m-0 desc'>lorem ipsum</h1> */}
@@ -90,17 +93,17 @@ function LandingPage() {
                           btaade!
                         </p>
                         <div className="text-center button-container row justify-content-center">
-                          <p
-                            className="btn btn-success col-5 col-lg-4 rounded card-buttons m-2 p-md-1 mx-2 btn-sm p-0 "
+                        <p
+                            className="btn btn-success col-5 col-lg-4 rounded card-buttons  m-2 p-md-1 mx-2 btn-sm p-0"
                             id="login-btn"
                           >
-                            <Link to="/login"> Login </Link>
+                            <Link to="/login"className="linkk">Login</Link>
                           </p>
                           <p
-                            className="btn btn-success col-6 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0"
+                            className="btn btn-success col-7 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0 mt-0"
                             id="signup-btn"
                           >
-                            <Link to="/register"> Sign up </Link>
+                            <Link to="/register" className="linkk">Sign up</Link>
                           </p>
                         </div>
                       </div>
@@ -126,28 +129,31 @@ function LandingPage() {
                   <div class="card-body text-center">
                     <h4 class="card-title text-light">Expert </h4>
                     {/* Card hover effect */}
-                    <div className="overlay" id="card-hover-1">
+                    <div
+                      className="overlay justify-content-center align-items-center"
+                      id="card-hover-1"
+                    >
                       <div className="items"></div>
                       <div className="items head">
                         {/* <h1 className='text-center m-0 desc'>lorem ipsum</h1> */}
                       </div>
                       <div className="items price my-0 row justify-content-center align-items-center cardBox">
-                        <p className="text-white hover-card-text text-center m-1">
+                        <p className="text-white hover-card-text text-center mt-1 mb-0">
                           le jogi khush hai na ab ? aur kuch krna bcha hai toh
                           btaade!
                         </p>
                         <div className="text-center button-container row justify-content-center">
                           <p
-                            className="btn btn-success col-5 col-lg-4 rounded card-buttons m-2 p-md-1 mx-2 btn-sm p-0 "
+                            className="btn btn-success col-5 col-lg-4 rounded card-buttons  m-2 p-md-1 mx-2 btn-sm p-0"
                             id="login-btn"
                           >
-                            <Link to="/login">Login</Link>
+                            <Link to="/login"className="linkk">Login</Link>
                           </p>
                           <p
-                            className="btn btn-success col-6 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0"
+                            className="btn btn-success col-7 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0 mt-0"
                             id="signup-btn"
                           >
-                            <Link to="/register">Sign up</Link>
+                            <Link to="/register" className="linkk">Sign up</Link>
                           </p>
                         </div>
                       </div>

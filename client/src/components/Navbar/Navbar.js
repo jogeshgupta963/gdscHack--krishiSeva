@@ -79,7 +79,7 @@ function Navbar() {
             </ul>
           </div>
         </div>
-      </nav>
+      </nav>  
     </Fragment>
   );
 }

@@ -101,7 +101,7 @@ body {
 /*! Main container */
 
 .main-container {
-  height: 100vh;
+  height: 120vh;
   background: url(../../assets/images/main-bg.jpeg);
   background-size: cover;
   background-repeat: repeat;
@@ -236,9 +236,21 @@ padding: 3em;
 .hover-card-text {
   font-family: "popins";
 }
-.cardBox{
+
+.cardBox {
   height: 100%;
 }
-button{
+
+button {
   font-size: 5em;
+}
+
+.linkk {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.linkk:hover {
+  color: whitesmoke;
+  text-decoration: none;
 }
