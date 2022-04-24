@@ -96,6 +96,7 @@ function Login () {
                       name="name"
                       className="form-control my-3 w-50"
                       placeholder="Your Phone Number Here"
+                      autocomplete="off"
                     />
                   </label>
                   <label for="inputPassword6">
@@ -118,7 +119,7 @@ function Login () {
                       Remember Me
                       <Link
                         to="#"
-                        className="text-light text-decoration-none ms-md-3 ms-lg-5"
+                        className="text-light text-decoration-none ms-md-3 ms-lg-5 forgot_link"
                         id="forgot_link"
                       >
                         Forgot Password ?
@@ -127,7 +128,7 @@ function Login () {
                   </div>
 
                   <Link
-                    to="#"
+                    to="/LandingPage"
                     className="btn text-center text-light fw-bold mt-4 w-50 px-0 mx-3 py-2"
                     id="login_btn"
                   >
@@ -136,7 +137,7 @@ function Login () {
                   <p className="text-light mt-3 ms-2">
                     Don't have an account? Sign up
                     {' '}
-                    <Link to="#" className="text-light">here</Link>
+                    <Link to="/Register" className="text-light">here</Link>
                   </p>
                 </div>
               </form>

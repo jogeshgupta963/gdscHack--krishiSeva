@@ -38,6 +38,7 @@ function Register() {
                       name="name"
                       className="form-control my-3 w-50"
                       placeholder="Your Phone Number Here"
+                      autocomplete="off"
                     />
                   </label>
                   <label for="inputPassword6">
@@ -59,7 +60,7 @@ function Register() {
                     />
                   </label>
                   <Link
-                    to="#"
+                    to="/LandingPage"
                     className="btn text-center text-light fw-bold mt-4 w-50 px-0 mx-2 py-2"
                     id="signUp_btn"
                   >

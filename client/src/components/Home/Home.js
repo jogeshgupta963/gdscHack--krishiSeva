@@ -65,13 +65,14 @@ function LandingPage () {
                         {/* <span>ADD TO CART</span> */}
                       </div>
                     </div>
-                    <a href="#" className="text-decoration-none">
+                    <Link to ="#" className="text-decoration-none">
                       <img
                         className="card-img img-fluid"
                         id="middleman-card"
                         src="https://i.ibb.co/7p94TtV/middleman.png"
+                        alt='middleman'
                       />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -116,13 +117,14 @@ function LandingPage () {
                         {/* <span>ADD TO CART</span> */}
                       </div>
                     </div>
-                    <a href="#">
+                    <Link to ="#">
                       <img
                         className="card-img"
                         id="farmer-card"
                         src="https://i.ibb.co/qyKKwSd/farmer.png"
+                        alt='Farmer'
                       />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -168,13 +170,14 @@ function LandingPage () {
                         {/* <span>ADD TO CART</span> */}
                       </div>
                     </div>
-                    <a href="#">
+                    <Link to ="#">
                       <img
                         className="card-img"
                         id="expert-card"
                         src="https://i.ibb.co/LpWNPnL/expert.png"
+                        alt='Expert'
                       />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

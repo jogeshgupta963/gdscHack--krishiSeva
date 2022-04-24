@@ -62,7 +62,7 @@
 
 #main-box {
   background-color: #9c695a;
-  height: 95vh;
+  height: 100vh;
   /* transform: translateX(20px); */
 }
 
@@ -80,7 +80,7 @@ h1 {
   background-size: cover;
   background-repeat: repeat;
   background-position: 50% 40%;
-  height: 95vh;
+  height: 100vh;
 }
 
 label {
