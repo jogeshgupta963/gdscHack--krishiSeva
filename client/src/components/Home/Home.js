@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
-import "./Home.css";
-import "./../../assets/images/main-bg.jpeg";
-import { Link } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
-function LandingPage() {
+import React, {Fragment} from 'react';
+import './Home.css';
+import './../../assets/images/main-bg.jpeg';
+import {Link} from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
+function LandingPage () {
   return (
     <Fragment>
       <Navbar />
@@ -34,7 +34,7 @@ function LandingPage() {
                       className="overlay justify-content-center align-items-center"
                       id="card-hover-1"
                     >
-                      <div className="items"></div>
+                      <div className="items" />
                       <div className="items head">
                         {/* <h1 className='text-center m-0 desc'>lorem ipsum</h1> */}
                       </div>
@@ -48,13 +48,15 @@ function LandingPage() {
                             className="btn btn-success col-5 col-lg-4 rounded card-buttons m-2 p-md-1 mx-2 btn-sm p-0 "
                             id="login-btn"
                           >
-                            <Link to="/login"className="linkk">Login</Link>
+                            <Link to="/login" className="linkk">Login</Link>
                           </p>
                           <p
                             className="btn btn-success col-7 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0"
                             id="signup-btn"
                           >
-                            <Link to="/register" className="linkk">Sign up</Link>
+                            <Link to="/register" className="linkk">
+                              Sign up
+                            </Link>
                           </p>
                         </div>
                       </div>
@@ -68,7 +70,7 @@ function LandingPage() {
                         className="card-img img-fluid"
                         id="middleman-card"
                         src="https://i.ibb.co/7p94TtV/middleman.png"
-                      ></img>
+                      />
                     </a>
                   </div>
                 </div>
@@ -83,7 +85,7 @@ function LandingPage() {
                       className="overlay justify-content-center align-items-center"
                       id="card-hover-1"
                     >
-                      <div className="items"></div>
+                      <div className="items" />
                       <div className="items head">
                         {/* <h1 className='text-center m-0 desc'>lorem ipsum</h1> */}
                       </div>
@@ -93,17 +95,19 @@ function LandingPage() {
                           btaade!
                         </p>
                         <div className="text-center button-container row justify-content-center">
-                        <p
+                          <p
                             className="btn btn-success col-5 col-lg-4 rounded card-buttons  m-2 p-md-1 mx-2 btn-sm p-0"
                             id="login-btn"
                           >
-                            <Link to="/login"className="linkk">Login</Link>
+                            <Link to="/login" className="linkk">Login</Link>
                           </p>
                           <p
                             className="btn btn-success col-7 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0 mt-0"
                             id="signup-btn"
                           >
-                            <Link to="/register" className="linkk">Sign up</Link>
+                            <Link to="/register" className="linkk">
+                              Sign up
+                            </Link>
                           </p>
                         </div>
                       </div>
@@ -117,7 +121,7 @@ function LandingPage() {
                         className="card-img"
                         id="farmer-card"
                         src="https://i.ibb.co/qyKKwSd/farmer.png"
-                      ></img>
+                      />
                     </a>
                   </div>
                 </div>
@@ -133,7 +137,7 @@ function LandingPage() {
                       className="overlay justify-content-center align-items-center"
                       id="card-hover-1"
                     >
-                      <div className="items"></div>
+                      <div className="items" />
                       <div className="items head">
                         {/* <h1 className='text-center m-0 desc'>lorem ipsum</h1> */}
                       </div>
@@ -147,13 +151,15 @@ function LandingPage() {
                             className="btn btn-success col-5 col-lg-4 rounded card-buttons  m-2 p-md-1 mx-2 btn-sm p-0"
                             id="login-btn"
                           >
-                            <Link to="/login"className="linkk">Login</Link>
+                            <Link to="/login" className="linkk">Login</Link>
                           </p>
                           <p
                             className="btn btn-success col-7 rounded m-lg-2 col-lg-4 card-buttons p-md-1 mx-2 p-0 mt-0"
                             id="signup-btn"
                           >
-                            <Link to="/register" className="linkk">Sign up</Link>
+                            <Link to="/register" className="linkk">
+                              Sign up
+                            </Link>
                           </p>
                         </div>
                       </div>
@@ -167,7 +173,7 @@ function LandingPage() {
                         className="card-img"
                         id="expert-card"
                         src="https://i.ibb.co/LpWNPnL/expert.png"
-                      ></img>
+                      />
                     </a>
                   </div>
                 </div>

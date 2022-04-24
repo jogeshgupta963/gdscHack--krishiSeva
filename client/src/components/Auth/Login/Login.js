@@ -107,7 +107,7 @@ function Login () {
                       placeholder="Your Password Here"
                     />
                   </label>
-                  <div class="form-check">
+                  <div class="form-check ms-3">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -133,7 +133,7 @@ function Login () {
                   >
                     Login
                   </Link>
-                  <p className="text-light mt-3 mx-auto">
+                  <p className="text-light mt-3 ms-2">
                     Don't have an account? Sign up
                     {' '}
                     <Link to="#" className="text-light">here</Link>

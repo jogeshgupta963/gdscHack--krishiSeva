@@ -96,5 +96,10 @@ input {
 
 #login_btn {
   background-color: #0BC06C;
-  font-size: 1.5em
+  font-size: 1.5em;
+  transition: 0.5s;
+}
+
+#login_btn:hover {
+  background-color: #059a54;
 }
