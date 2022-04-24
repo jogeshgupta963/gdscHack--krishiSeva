@@ -5,26 +5,11 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <Fragment>
-      {/* <nav class="main-nav">
-              <input type="checkbox" id="check" />
-              <label for="check" class="menu-btn">
-                <i class="fas fa-bars"></i>
-              </label>
-
-              <ul class="navlinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">FAQ's</a></li>
-                <li><a href="#" class="get-in-touch">Get in touch</a></li>
-              </ul>
-            </nav>
-             */}
-      <nav class="navbar navbar-expand-md p-0 px-0 navbar-light" id="navbarrr">
+      <nav class="navbar navbar-expand-md p-0 px-0 navbara-light" id="navbarrr">
         <div class="container-fluid">
           {/* <!-- toggle button for mobile nav --> */}
           <button
-            class="navbar-toggler"
+            class="navbar-toggler navbar-light"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#main-nav"
@@ -32,7 +17,7 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon navbar-light"></span>
           </button>
 
           {/* <!-- navbar Links --> */}

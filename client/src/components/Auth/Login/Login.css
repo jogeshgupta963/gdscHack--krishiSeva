@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
 
 .login {
   text-align: center;
@@ -54,4 +54,52 @@
 
 .footer-text a {
   color: #000;
+} */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main-box {
+  background-color: #9c695a;
+  height: 100vh;
+  /* transform: translateX(20px); */
+}
+
+h3 {
+  color: white;
+}
+
+h1 {
+  color: #0BC06C;
+}
+
+#second-box {
+  background-image: url("https://i.ibb.co/ZfBH8jR/login-bg.jpg");
+  /* height: 120vh; */
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 50% 40%;
+  height: 100vh;
+}
+
+label {
+  color: white;
+}
+
+input {
+  height: 3em;
+  border-radius: 7px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  background-color: #ded8d8;
+}
+
+#login_btn {
+  background-color: #0BC06C;
+  font-size: 1.5em;
+  transition: 0.5s;
+}
+
+#login_btn:hover {
+  background-color: #059a54;
 }
