@@ -1,5 +1,5 @@
 import {Fragment} from 'react'
-import Home from './components/LandingPage/LandingPage';
+import Home from './components/Home/Home';
 import Login from './components/Auth/Login/Login.js';
 import Register from './components/Auth/Register/Register';
 import Navbar from './components/Navbar/Navbar.js';

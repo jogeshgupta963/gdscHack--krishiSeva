@@ -8,6 +8,7 @@ function LandingPage() {
 <Fragment>
 < Navbar/>
 <div class="container-fluid main-container_1">
+  
 
   {/* < img src = 'https://i.ibb.co/r4mq8nd/agrigator-digital-farming-platform-pic-ds1-1.jp' > </img> */}
             <div class="position-relative top-50 start-0 translate-middle-y mx-md-5 mx-3 d-none d-md-block p-3" id="main_text_box-1">
