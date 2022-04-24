@@ -76,7 +76,7 @@ h1 {
 
 #second-box {
   background-image: url("https://i.ibb.co/ZfBH8jR/login-bg.jpg");
-  height: 120vh;
+  /* height: 120vh; */
   background-size: cover;
   background-repeat: repeat;
   background-position: 50% 40%;

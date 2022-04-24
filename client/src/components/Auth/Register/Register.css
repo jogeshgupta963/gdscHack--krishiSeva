@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@600&display=swap');
+
+#heading {
+    display: inline;
+    font-family: 'Mohave',
+        sans-serif;
+    letter-spacing: 0em;
+    text-shadow: 0px 4px 4px 0px #00000040;
+    color: #14591D;
+}
+
+span {
+    color: #e7d7c1;
+}
+
+#signUp_btn {
+    background-color: #0BC06C;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+
+#signUp_btn:hover {
+    background-color: #059a54;
+}
+
+#img_box {
+    background-image: url("https://i.ibb.co/kXKdfHz/sign-Up-bg.jpg");
+    /* height: 120vh; */
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: 50% 40%;
+    height: 95vh;
+}
