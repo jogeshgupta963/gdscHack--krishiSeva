@@ -8,7 +8,7 @@
     height: 90vh;
     width: auto;
     color: white;
-    animation: slideBg 10s infinite ease-in-out;
+    animation: slideBg 10s infinite ease;
     /* background: #000; */
 }
 

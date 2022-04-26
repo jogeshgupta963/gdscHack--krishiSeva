@@ -1,16 +1,16 @@
-import React, { Fragment } from 'react'
+import React, {Fragment} from 'react';
 import {Link} from 'react-router-dom';
 import Navbar from '../../Navbar/Navbar';
+import 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js';
 import './Register.css';
-function Register() {
+function Register () {
   return (
-  
     <Fragment>
-       <Navbar />
+      <Navbar />
 
-<div className="main_container container-fluid">
-<div className="row  align-items-center">
-<div className="col-6 text-start m-0 p-0" id="main-box">
+      <div className="main_container container-fluid">
+        <div className="row  align-items-center">
+          <div className="col-6 text-start m-0 p-0" id="main-box">
             <div className="text_box ms-md-5 mt-md-3">
               <h1 className="display-1 fw-bolder" id="heading">
                 Krishi<span>Seva</span>
@@ -19,11 +19,11 @@ function Register() {
               <h3>Sign up to get started with KrishiSeva</h3>
             </div>
 
-            <div className='form_box'>
+            <div className="form_box">
               <form>
                 <div className="form-group row ms-5 mt-5">
-                <label for="formGroupExampleInput">
-                  Full Name
+                  <label for="formGroupExampleInput">
+                    Full Name
                     <input
                       type="text"
                       name="name"
@@ -66,15 +66,20 @@ function Register() {
                   >
                     Sign Up
                   </Link>
-                  </div>
-</form>
-</div>
-</div>
-<div className="col-6 text-start m-0 p-0" id='img_box'></div>
-</div>
-</div>
-</Fragment>
-  )
+                  <p className="text-light mt-3 ms-5 ms-md-2">
+                    Already have an account? Login
+                    {' '}
+                    <Link to="/Login" className="text-light">here</Link>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className="col-6 text-start m-0 p-0" id="img_box" />
+        </div>
+      </div>
+    </Fragment>
+  );
 }
 
-export default Register
+export default Register;

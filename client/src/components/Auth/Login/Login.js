@@ -60,11 +60,8 @@ function Login () {
       </form>
     </section> */}
 
-      {/*TODO New design */}
-
       <div className="main_container container-fluid">
         <div className="row  align-items-center">
-          {/* TODO add justify-content-center */}
           <div className="col-6 text-start m-0 p-0" id="main-box">
             <div className="text_box ms-md-5 mt-md-5">
               <h1 className="display-1 fw-bolder py-5 my-5" id="heading">
