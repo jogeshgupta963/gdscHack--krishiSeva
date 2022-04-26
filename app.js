@@ -2,12 +2,14 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
+const cors=require('cors')
 
 //functions
 
 const connect = require("./server/dbConnection/connect");
 const app = express();
 
+app.use(cors())
 app.use(express.json());
 app.use(cookieParser());
 app.use("/css", express.static(__dirname + "/client/components/css"));
