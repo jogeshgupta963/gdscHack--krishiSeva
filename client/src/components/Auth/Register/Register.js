@@ -13,9 +13,7 @@ function Register() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const { isLoggedIn } = useSelector((state) => state.auth);
-
   const dispatch = useDispatch();
-
   const clickHandle = async (e) => {
     e.preventDefault();
     console.log(isLoggedIn);
@@ -28,12 +26,9 @@ function Register() {
         password,
       });
     }
-    // console.log(typeof user.data.status);
-    if (!user.data.status) console.log("errrr");
-
+    if (!user.data.status) console.log(user.data.msg);
     dispatch(signup());
   };
-  console.log(isLoggedIn);
 
   return (
     <Fragment>
@@ -94,7 +89,15 @@ function Register() {
                       onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                   </label>
-                  <button onClick={clickHandle}>Signup</button>
+                  {/* <button onClick={clickHandle}>Signup</button> */}
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      dispatch(signup());
+                    }}
+                  >
+                    Signup
+                  </button>
                   {/* <Link
                     to="#"
                     className="btn text-center text-light fw-bold mt-4 w-50 px-0 mx-2 py-2"
