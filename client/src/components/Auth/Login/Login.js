@@ -1,11 +1,37 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import {Link} from 'react-router-dom';
 import Navbar from '../../Navbar/Navbar';
 import './Login.css';
+
+import {login} from '../../../redux/auth';
+import {useDispatch, useSelector} from 'react-redux';
+import axios from 'axios';
+
 function Login () {
+  const {isLoggedIn} = useSelector (state => state.auth);
+  const dispatch = useDispatch ();
+
+  const [phnNum, setPhnNum] = useState (0);
+  const [password, setPassword] = useState ('');
+
+  async function clickHandle (e) {
+    e.preventDefault ();
+
+    let userLogin = await axios.post (
+      'http://localhost:3000/api/v1/user/login',
+      {phoneNumber: phnNum, password}
+    );
+    console.log (userLogin);
+
+    if (!userLogin.data.status) {
+      console.log (userLogin.data.msg);
+    }
+
+    dispatch (() => login ());
+  }
+
   return (
     <Fragment>
-
       <Navbar />
       {/* <section class="vh-100"> */}
       {/* <!-- <img src="images/login_element.png" class="login_element" alt="" /> --> */}
@@ -68,7 +94,7 @@ function Login () {
                 Krishi<span>Seva</span>
               </h1>
               <h3 className="mt-3">Hello there!</h3>
-              <h1 class="login">Welcome Back</h1>
+              <h1 className="login">Welcome Back</h1>
               <h3>Login to your KrishiSeva account</h3>
             </div>
 
@@ -94,6 +120,7 @@ function Login () {
                       className="form-control my-3 w-50"
                       placeholder="Your Phone Number Here"
                       autocomplete="off"
+                      onChange={e => setPhnNum (e.target.value)}
                     />
                   </label>
                   <label for="inputPassword6">
@@ -103,11 +130,12 @@ function Login () {
                       name="name"
                       className="form-control my-3 w-50"
                       placeholder="Your Password Here"
+                      onChange={e => setPassword (e.target.value)}
                     />
                   </label>
                   <div class="form-check ms-3">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -124,29 +152,34 @@ function Login () {
                     </label>
                   </div>
 
-                  <Link
-                    to="/LandingPage"
+                  <button
+                    onClick={clickHandle}
                     className="btn text-center text-light fw-bold mt-4 w-50 px-0 mx-3 py-2"
                     id="login_btn"
                   >
                     Login
-                  </Link>
+                  </button>
+                  {/* <Link
+                    // to="/LandingPage"
+                   
+                    // onClick={clickHandle}
+                  >
+                    Login
+                  </Link> */}
                   <p className="text-light mt-3 ms-2">
-                    Don't have an account? Sign up
-                    {' '}
-                    <Link to="/Register" className="text-light">here</Link>
+                    Don't have an account? Sign up{' '}
+                    <Link to="/Register" className="text-light">
+                      here
+                    </Link>
                   </p>
                 </div>
               </form>
-
             </div>
-
           </div>
 
           <div className="col-6 text-start m-0 p-0" id="second-box" />
         </div>
       </div>
-
     </Fragment>
   );
 }

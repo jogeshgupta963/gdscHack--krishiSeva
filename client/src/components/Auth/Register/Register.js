@@ -18,7 +18,7 @@ function Register () {
 
   const clickHandle = async e => {
     e.preventDefault ();
-    console.log (isLoggedIn);
+
     var user;
 
     if (password === confirmPassword) {
@@ -28,12 +28,17 @@ function Register () {
         password,
       });
     }
-    // console.log(typeof user.data.status);
-    if (!user.data.status) console.log ('errrr');
 
+    // console.log(typeof user.data.status);
+    // if (!user.data.status) console.log ('errrr');
+
+    // dispatch (signup ());
+    // };
+    // console.log (isLoggedIn);
+
+    if (!user.data.status) console.log (user.data.msg);
     dispatch (signup ());
   };
-  console.log (isLoggedIn);
 
   return (
     <Fragment>
@@ -77,7 +82,9 @@ function Register () {
 
                   {/* dropwdown */}
                   <div>
-                    <label htmlFor="type" className='mb-2 mt-3'>You are a:</label>
+                    <label htmlFor="type" className="mb-2 mt-3">
+                      You are a:
+                    </label>
                     <select
                       name="type"
                       id="type"
@@ -109,10 +116,25 @@ function Register () {
                       onChange={e => setConfirmPassword (e.target.value)}
                     />
                   </label>
+
                   <button
                     onClick={clickHandle}
                     className="btn text-center text-light fw-bold mt-4 w-50 px-0 mx-2 py-2"
                     id="signUp_btn"
+                  >
+                    Signup
+                  </button>
+                  {/* <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      dispatch(signup());
+                    }}
+                  >
+                    Signup
+                  </button> */}
+                  {/* <Link
+                    
+                    
                   >
                     Signup
                   </button>
@@ -142,6 +164,7 @@ function Register () {
 
         </div>
       </div>
+      <div></div>
     </Fragment>
   );
 }
