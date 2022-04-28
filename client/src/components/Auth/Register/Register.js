@@ -41,12 +41,12 @@ function Register () {
 
       <div className="main_container container-fluid">
         <div className="row  align-items-center">
-          <div className="col-6 text-start m-0 p-0" id="main-box">
+          <div className="col-6 text-start m-0 p-0" id="main-box_1">
             <div className="text_box ms-md-5 mt-md-3">
               <h1 className="display-1 fw-bolder" id="heading">
                 Krishi<span>Seva</span>
               </h1>
-              <h3 className="mt-3">Hello there!</h3>
+              <h3 className="mt-2">Hello there!</h3>
               <h3>Sign up to get started with KrishiSeva</h3>
             </div>
 
@@ -74,6 +74,21 @@ function Register () {
                       onChange={e => setPhnNum (e.target.value)}
                     />
                   </label>
+
+                  {/* dropwdown */}
+                  <div>
+                    <label htmlFor="type" className='mb-2 mt-3'>You are a:</label>
+                    <select
+                      name="type"
+                      id="type"
+                      className="form-control mb-3 w-25 text-light border-0"
+                    >
+                      <option value="volvo">Farmer</option>
+                      <option value="saab">MiddleMan</option>
+                      <option value="opel">Expert</option>
+                    </select>
+                  </div>
+
                   <label for="inputPassword6">
                     Password
                     <input
@@ -94,22 +109,28 @@ function Register () {
                       onChange={e => setConfirmPassword (e.target.value)}
                     />
                   </label>
-                  <button onClick={clickHandle}>Signup</button>
-                  {/* <Link
-                    to="#"
+                  <button
+                    onClick={clickHandle}
                     className="btn text-center text-light fw-bold mt-4 w-50 px-0 mx-2 py-2"
                     id="signUp_btn"
+                  >
+                    Signup
+                  </button>
+                  {/* <Link
+                    to="#"
+                    
                     onClick={clickHandle}
                   >
                     Sign Up
 
                   </Link>
+                   </Link> */}
                   <p className="text-light mt-3 ms-5 ms-md-2">
                     Already have an account? Login
                     {' '}
                     <Link to="/Login" className="text-light">here</Link>
                   </p>
-                  </Link> */}
+
                 </div>
               </form>
             </div>
@@ -117,7 +138,7 @@ function Register () {
 
           <div className="col-6 text-start m-0 p-0" id="img_box" />
 
-          <div className="col-6 text-start m-0 p-0" id="img_box" />
+          {/* <div className="col-6 text-start m-0 p-0" id="img_box" /> */}
 
         </div>
       </div>
