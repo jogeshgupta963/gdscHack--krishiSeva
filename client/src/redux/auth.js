@@ -8,11 +8,12 @@ export const authSlice = createSlice({
         isLoggedIn:false
     },
     reducers:{
-        signup: async(state)=>{
-            state.isLoggedIn  = true
+        signup: (state)=>{
+            state.isLoggedIn  =true
         },
-        login: (state,action)=>{
-            console.log(action.payload)
+        login: (state)=>{
+            state.isLoggedIn  =true
+
         }
     }
 })
