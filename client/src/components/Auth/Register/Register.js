@@ -26,7 +26,10 @@ function Register() {
         password,
       });
     }
-    if (!user.data.status) console.log(user.data.msg);
+    if (!user.data.status) {
+      console.log(user.data.msg);
+      return;
+    }
     dispatch(signup());
   };
 
