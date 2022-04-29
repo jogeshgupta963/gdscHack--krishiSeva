@@ -40,8 +40,7 @@ function LandingPage () {
                       </div>
                       <div className="items price my-0 row justify-content-center align-items-center cardBox">
                         <p className="text-white hover-card-text text-center m-1">
-                          le jogi khush hai na ab ? aur kuch krna bcha hai toh
-                          btaade!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fugit consequuntur officiis esse?
                         </p>
                         <div className="text-center button-container row justify-content-center">
                           <p
@@ -65,12 +64,12 @@ function LandingPage () {
                         {/* <span>ADD TO CART</span> */}
                       </div>
                     </div>
-                    <Link to ="#" className="text-decoration-none">
+                    <Link to="#" className="text-decoration-none">
                       <img
                         className="card-img img-fluid"
                         id="middleman-card"
                         src="https://i.ibb.co/7p94TtV/middleman.png"
-                        alt='middleman'
+                        alt="middleman"
                       />
                     </Link>
                   </div>
@@ -92,8 +91,7 @@ function LandingPage () {
                       </div>
                       <div className="items price my-0 row justify-content-center align-items-center cardBox">
                         <p className="text-white hover-card-text text-center m-1">
-                          le jogi khush hai na ab ? aur kuch krna bcha hai toh
-                          btaade!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam libero vitae impedit!
                         </p>
                         <div className="text-center button-container row justify-content-center">
                           <p
@@ -117,12 +115,12 @@ function LandingPage () {
                         {/* <span>ADD TO CART</span> */}
                       </div>
                     </div>
-                    <Link to ="#">
+                    <Link to="#">
                       <img
                         className="card-img"
                         id="farmer-card"
                         src="https://i.ibb.co/qyKKwSd/farmer.png"
-                        alt='Farmer'
+                        alt="Farmer"
                       />
                     </Link>
                   </div>
@@ -145,8 +143,7 @@ function LandingPage () {
                       </div>
                       <div className="items price my-0 row justify-content-center align-items-center cardBox">
                         <p className="text-white hover-card-text text-center mt-1 mb-0">
-                          le jogi khush hai na ab ? aur kuch krna bcha hai toh
-                          btaade!
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae omnis neque accusantium officia!
                         </p>
                         <div className="text-center button-container row justify-content-center">
                           <p
@@ -170,12 +167,12 @@ function LandingPage () {
                         {/* <span>ADD TO CART</span> */}
                       </div>
                     </div>
-                    <Link to ="#">
+                    <Link to="#">
                       <img
                         className="card-img"
                         id="expert-card"
                         src="https://i.ibb.co/LpWNPnL/expert.png"
-                        alt='Expert'
+                        alt="Expert"
                       />
                     </Link>
                   </div>

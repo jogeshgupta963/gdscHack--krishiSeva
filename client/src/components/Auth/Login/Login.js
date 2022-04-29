@@ -1,33 +1,33 @@
-import React, { Fragment, useState } from "react";
-import { Link } from "react-router-dom";
-import Navbar from "../../Navbar/Navbar";
-import "./Login.css";
+import React, {Fragment, useState} from 'react';
+import {Link} from 'react-router-dom';
+import Navbar from '../../Navbar/Navbar';
+import './Login.css';
 
+import {login} from '../../../redux/auth';
+import {useDispatch, useSelector} from 'react-redux';
+import axios from 'axios';
 
-import { login } from "../../../redux/auth";
-import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
+function Login () {
+  const {isLoggedIn} = useSelector (state => state.auth);
+  const dispatch = useDispatch ();
 
-function Login() {
-  
-  const {isLoggedIn} = useSelector(state=>state.auth)
-  const dispatch = useDispatch()
-  
-  const [phnNum, setPhnNum] = useState(0);
-  const [password, setPassword] = useState("");
+  const [phnNum, setPhnNum] = useState (0);
+  const [password, setPassword] = useState ('');
 
-  async function clickHandle(e) {
-    e.preventDefault();
-    
-    let userLogin = await axios.post('http://localhost:3000/api/v1/user/login',{phoneNumber:phnNum , password}) 
-    console.log(userLogin)
+  async function clickHandle (e) {
+    e.preventDefault ();
 
-    if(!userLogin.data.status){
-      console.log(userLogin.data.msg)
+    let userLogin = await axios.post (
+      'http://localhost:3000/api/v1/user/login',
+      {phoneNumber: phnNum, password}
+    );
+    console.log (userLogin);
+
+    if (!userLogin.data.status) {
+      console.log (userLogin.data.msg);
     }
 
-    dispatch(()=>login())
-
+    dispatch (() => login ());
   }
 
   return (
@@ -86,11 +86,8 @@ function Login() {
       </form>
     </section> */}
 
-      {/*TODO New design */}
-
       <div className="main_container container-fluid">
         <div className="row  align-items-center">
-          {/* TODO add justify-content-center */}
           <div className="col-6 text-start m-0 p-0" id="main-box">
             <div className="text_box ms-md-5 mt-md-5">
               <h1 className="display-1 fw-bolder py-5 my-5" id="heading">
@@ -123,7 +120,7 @@ function Login() {
                       className="form-control my-3 w-50"
                       placeholder="Your Phone Number Here"
                       autocomplete="off"
-                      onChange={(e) => setPhnNum(e.target.value)}
+                      onChange={e => setPhnNum (e.target.value)}
                     />
                   </label>
                   <label for="inputPassword6">
@@ -133,7 +130,7 @@ function Login() {
                       name="name"
                       className="form-control my-3 w-50"
                       placeholder="Your Password Here"
-                      onChange={(e) => setPassword(e.target.value)}
+                      onChange={e => setPassword (e.target.value)}
                     />
                   </label>
                   <div class="form-check ms-3">
@@ -157,19 +154,20 @@ function Login() {
 
                   <button
                     onClick={clickHandle}
+                    className="btn text-center text-light fw-bold mt-4 w-50 px-0 mx-3 py-2"
+                    id="login_btn"
                   >
                     Login
                   </button>
                   {/* <Link
                     // to="/LandingPage"
-                    className="btn text-center text-light fw-bold mt-4 w-50 px-0 mx-3 py-2"
-                    id="login_btn"
+                   
                     // onClick={clickHandle}
                   >
                     Login
                   </Link> */}
                   <p className="text-light mt-3 ms-2">
-                    Don't have an account? Sign up{" "}
+                    Don't have an account? Sign up{' '}
                     <Link to="/Register" className="text-light">
                       here
                     </Link>
