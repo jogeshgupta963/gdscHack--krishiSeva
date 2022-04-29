@@ -44,6 +44,7 @@ function Register () {
     <Fragment>
       <Navbar />
 
+      {/* TODO Link pages */}
       <div className="main_container container-fluid">
         <div className="row  align-items-center">
           <div className="col-6 text-start m-0 p-0" id="main-box_1">
@@ -164,7 +165,7 @@ function Register () {
 
         </div>
       </div>
-      <div></div>
+      <div />
     </Fragment>
   );
 }
