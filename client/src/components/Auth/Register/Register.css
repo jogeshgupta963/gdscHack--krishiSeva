@@ -29,5 +29,14 @@ span {
     background-size: cover;
     background-repeat: repeat;
     background-position: 50% 40%;
-    height: 100vh;
+    height: 110vh;
+}
+
+#type {
+    background-color: #059a54;
+}
+
+#main-box_1 {
+    background-color: #9c695a;
+    height: 110vh;
 }
