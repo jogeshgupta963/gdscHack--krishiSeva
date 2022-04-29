@@ -1,3 +1,38 @@
+
+import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "../../Navbar/Navbar";
+import "./Login.css";
+
+
+import { login } from "../../../redux/auth";
+import {outputMessage} from '../../../redux/msg'
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+
+function Login() {
+  
+  const {isLoggedIn} = useSelector(state=>state.auth)
+  const {message} = useSelector(state=>state.msg)
+  const dispatch = useDispatch()
+  
+  const [phnNum, setPhnNum] = useState(0);
+  const [password, setPassword] = useState("");
+
+  async function clickHandle(e) {
+    e.preventDefault();
+    
+    let userLogin = await axios.post('http://localhost:3000/api/v1/user/login',{phoneNumber:phnNum , password}) 
+
+    if(!userLogin.data.status){
+      dispatch(()=>outputMessage(userLogin.data.msg))
+      // console.log(userLogin.data.msg)
+      return;
+    }
+    
+    dispatch(()=>login())
+    dispatch(()=>outputMessage(userLogin.data.msg))
+
 import React, {Fragment, useState} from 'react';
 import {Link} from 'react-router-dom';
 import Navbar from '../../Navbar/Navbar';
@@ -26,6 +61,7 @@ function Login () {
     if (!userLogin.data.status) {
       console.log (userLogin.data.msg);
     }
+
 
     dispatch (() => login ());
   }
