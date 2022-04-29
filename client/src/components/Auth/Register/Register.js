@@ -29,6 +29,13 @@ function Register () {
       });
     }
 
+    if (!user.data.status) {
+      console.log(user.data.msg);
+      return;
+    }
+    dispatch(signup());
+
+
     // console.log(typeof user.data.status);
     // if (!user.data.status) console.log ('errrr');
 
@@ -38,6 +45,7 @@ function Register () {
 
     if (!user.data.status) console.log (user.data.msg);
     dispatch (signup ());
+
   };
 
   return (
