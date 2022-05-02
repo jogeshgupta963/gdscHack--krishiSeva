@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css";
+import React, {Fragment} from 'react';
+import {Link} from 'react-router-dom';
+import './Navbar.css';
 
-function Navbar() {
+function Navbar () {
   return (
     <Fragment>
       <nav class="navbar navbar-expand-md p-0 px-0 navbara-light" id="navbarrr">
@@ -17,7 +17,7 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon navbar-light"></span>
+            <span class="navbar-toggler-icon navbar-light" />
           </button>
 
           {/* <!-- navbar Links --> */}
@@ -27,7 +27,7 @@ function Navbar() {
           >
             <ul class="navbar-nav">
               <li class="nav-item mx-2 my-md-3 line-hover">
-                <Link to="/home" class="nav-link">
+                <Link to="/ " class="nav-link">
                   Home
                 </Link>
               </li>
@@ -64,7 +64,7 @@ function Navbar() {
             </ul>
           </div>
         </div>
-      </nav>  
+      </nav>
     </Fragment>
   );
 }
