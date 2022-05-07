@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#pf-container {
+    background: #9D695A;
+    height: 100vh;
+}
+
+#forgetBtn {
+    background-color: #0BC06C;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+
+
+/* TODO OTP Box */
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
+.digit-group input {
+    width: 3em;
+    height: 3em;
+    background-color: #DFD8D8;
+    border-radius: 7px;
+    border: none;
+    /* line-height: 50px; */
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-weight: 200;
+    color: black;
+    margin: 0 2px;
+}
+
+.digit-group .splitter {
+    padding: 0 5px;
+    color: white;
+    font-size: 24px;
+}
+
+.prompt {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.phone_num {
+    width: 40%;
+}
