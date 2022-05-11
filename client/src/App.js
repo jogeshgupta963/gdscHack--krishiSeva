@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Fragment>
           <Routes>
-            {/* <Route path="/" element={<LandingPage/>} /> */}
+            <Route path="/dashboard" element={<LandingPage/>} />
               <Route path="/" element={<Home />} />
           </Routes>
           

@@ -1,58 +1,63 @@
-import React, {Fragment, useState} from 'react';
-import {Link} from 'react-router-dom';
-import Navbar from '../../Navbar/Navbar';
-import './Register.css';
-import axios from 'axios';
-import {signup} from '../../../redux/auth';
-import {useDispatch, useSelector} from 'react-redux';
+import React, { Fragment, useState, useRef } from "react";
+import { Link, Navigate } from "react-router-dom";
+import Navbar from "../../Navbar/Navbar";
+import "./Register.css";
+import axios from "axios";
+import { signup } from "../../../redux/auth";
+import { useDispatch, useSelector } from "react-redux";
+import Cookies from "js-cookie";
 
-function Register () {
-  const [name, setName] = useState ('');
-  const [phnNum, setPhnNum] = useState (0);
-  const [password, setPassword] = useState ('');
-  const [confirmPassword, setConfirmPassword] = useState ('');
+function Register() {
+  // const [name, setName] = useState("");
+  // const [phnNum, setPhnNum] = useState(0);
+  // const [password, setPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
 
-  const {isLoggedIn} = useSelector (state => state.auth);
+  const name = useRef("");
+  const pass = useRef("");
+  const conPass = useRef("");
+  const phnNum = useRef(0);
+  const { isLoggedIn } = useSelector((state) => state.auth);
 
-  const dispatch = useDispatch ();
+  const dispatch = useDispatch();
 
-  const clickHandle = async e => {
-    e.preventDefault ();
+  const clickHandle = async (e) => {
+    e.preventDefault();
 
+    console.log(name.current.value);
     var user;
 
-    if (password === confirmPassword) {
-      user = await axios.post ('http://localhost:3000/api/v1/user/signup', {
-        name,
-        phoneNumber: phnNum,
-        password,
-      });
+    if (pass.current.value === conPass.current.value) {
+      axios.defaults.withCredentials = true;
+      user = await axios.post(
+        "http://localhost:3000/api/v1/user/signup",
+
+        {
+          name: name.current.value,
+          phoneNumber: phnNum.current.value,
+          password: pass.current.value,
+        }
+      );
+      console.log(user.data);
+      return;
     }
 
     if (!user.data.status) {
       console.log(user.data.msg);
       return;
     }
-    dispatch(signup());
-
-
-    // console.log(typeof user.data.status);
-    // if (!user.data.status) console.log ('errrr');
-
+    // dispatch(signup());
+    // if (!user.data.status) console.log(user.data.msg);
     // dispatch (signup ());
-    // };
-    // console.log (isLoggedIn);
-
-    if (!user.data.status) console.log (user.data.msg);
-    dispatch (signup ());
-
   };
 
   return (
     <Fragment>
+      {Cookies.get("JWT") && <Navigate to="/dashboard" />}
       <Navbar />
 
       {/* TODO Link pages */}
+
       <div className="main_container container-fluid">
         <div className="row  align-items-center">
           <div className="col-6 text-start m-0 p-0" id="main-box_1">
@@ -74,7 +79,8 @@ function Register () {
                       name="name"
                       className="form-control my-3 w-50"
                       placeholder="Your Full Name Here"
-                      onChange={e => setName (e.target.value)}
+                      // onChange={(e) => setName(e.target.value)}
+                      ref={name}
                     />
                   </label>
                   <label for="formGroupExampleInput">
@@ -85,7 +91,8 @@ function Register () {
                       className="form-control my-3 w-50"
                       placeholder="Your Phone Number Here"
                       autocomplete="off"
-                      onChange={e => setPhnNum (e.target.value)}
+                      // onChange={(e) => setPhnNum(e.target.value)}
+                      ref={phnNum}
                     />
                   </label>
 
@@ -112,7 +119,8 @@ function Register () {
                       name="name"
                       className="form-control my-3 w-50"
                       placeholder="Your Password Here"
-                      onChange={e => setPassword (e.target.value)}
+                      // onChange={(e) => setPassword(e.target.value)}
+                      ref={pass}
                     />
                   </label>
                   <label forhtml="inputPassword6">
@@ -122,7 +130,8 @@ function Register () {
                       name="name"
                       className="form-control my-3 w-50"
                       placeholder="Re-Enter your Password Here"
-                      onChange={e => setConfirmPassword (e.target.value)}
+                      // onChange={(e) => setConfirmPassword(e.target.value)}
+                      ref={conPass}
                     />
                   </label>
 
@@ -133,44 +142,18 @@ function Register () {
                   >
                     Signup
                   </button>
-                  {/* <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      dispatch(signup());
-                    }}
-                  >
-                    Signup
-                  </button> */}
-                  {/* <Link
-                    
-                    
-                  >
-                    Signup
-                  </button>
-                  {/* <Link
-                    to="#"
-                    
-                    onClick={clickHandle}
-                  >
-                    Sign Up
-
-                  </Link>
-                   </Link> */}
                   <p className="text-light mt-3 ms-5 ms-md-2">
-                    Already have an account? Login
-                    {' '}
-                    <Link to="/Login" className="text-light">here</Link>
+                    Already have an account? Login{" "}
+                    <Link to="/Login" className="text-light">
+                      here
+                    </Link>
                   </p>
-
                 </div>
               </form>
             </div>
           </div>
 
           <div className="col-6 text-start m-0 p-0" id="img_box" />
-
-          {/* <div className="col-6 text-start m-0 p-0" id="img_box" /> */}
-
         </div>
       </div>
       <div />

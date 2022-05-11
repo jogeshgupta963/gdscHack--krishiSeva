@@ -9,7 +9,10 @@ const cors=require('cors')
 const connect = require("./server/dbConnection/connect");
 const app = express();
 
-app.use(cors())
+app.use(cors(({
+  origin: true, // reflect request origin
+  credentials: true
+})))
 app.use(express.json());
 app.use(cookieParser());
 app.use("/css", express.static(__dirname + "/client/components/css"));
