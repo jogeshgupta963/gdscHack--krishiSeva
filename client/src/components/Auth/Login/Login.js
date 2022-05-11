@@ -1,4 +1,6 @@
 
+// <<<<<<< jogesh/backend
+// =======
 // import React, { Fragment, useState } from "react";
 // import { Link } from "react-router-dom";
 // import Navbar from "../../Navbar/Navbar";
@@ -33,6 +35,7 @@
 //     dispatch(()=>login())
 //     dispatch(()=>outputMessage(userLogin.data.msg))
 
+// >>>>>>> master
 import React, {Fragment, useState} from 'react';
 import {Link} from 'react-router-dom';
 import Navbar from '../../Navbar/Navbar';
