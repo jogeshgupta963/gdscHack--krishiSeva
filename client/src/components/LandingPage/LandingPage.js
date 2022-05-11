@@ -20,7 +20,7 @@ function LandingPage () {
           voluptatem dolorem placeat culpa officia?
 
           <div id="button-box">
-            <Link to="/home" className="btn text-light mt-4 me-3" id="btn-1">
+            <Link to="#bottom" className="btn text-light mt-4 me-3" id="btn-1">
               Get Started
             </Link>
             <Link to="#" className="btn mt-3 mt-lg-4 text-light" id="btn-2">
@@ -40,7 +40,7 @@ function LandingPage () {
           voluptatem dolorem placeat culpa officia?
 
           <div id="button-box">
-            <Link to="#" className="btn text-light mt-4 mx-3" id="btn-1">
+            <Link to="#bottom" className="btn text-light mt-4 mx-3" id="btn-1">
               Get Started
             </Link>
             <Link to="#" className="btn mt-4 text-light" id="btn-2">
@@ -51,7 +51,11 @@ function LandingPage () {
       </div>
 
       {/* Container 2 */}
-      <div class="container-fluid main-container_2 row justify-content-center align-items-center py-5">
+
+      <section
+        class="container-fluid main-container_2 row justify-content-center align-items-center py-5"
+        id="bottom"
+      >
         {/* card-1 */}
         <Link
           to="#"
@@ -178,7 +182,7 @@ function LandingPage () {
           </div>
         </Link>
 
-      </div>
+      </section>
     </Fragment>
   );
 }
