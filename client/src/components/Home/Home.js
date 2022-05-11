@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 function LandingPage () {
   return (
+    // TODO Link pages 
     <Fragment>
       <Navbar />
       <div className="main-container container-fluid justify-content-center align-itmes-center">

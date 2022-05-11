@@ -17,4 +17,3 @@
 [Get Started](./) <!-- TODO: Use ID of your homepage heading -->
 
 <!-- TODO: Set your background color or image. -->
-![color](red)

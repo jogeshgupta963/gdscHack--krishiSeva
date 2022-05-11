@@ -12,7 +12,7 @@
     /* background: #000; */
 }
 
-@keyframes slideBg {
+/* @keyframes slideBg {
     0% {
         background-image: url("https://i.ibb.co/VTVQ0LX/expert-bg.jpg");
 
@@ -31,7 +31,7 @@
     75% {
         background-image: url("https://www.mahindra.com/assets/cms-images/news-room/mahindrarise-75/mahindra-agri-helping-farmers-688x278.jpg");
     }
-}
+} */
 
 #landing-pg_heading {
     color: white;
@@ -69,4 +69,49 @@
 
 #btn-2:hover {
     background-color: #9D695A;
+}
+
+/* Container 2 */
+
+.main-container_2 {
+    background-image: url("https://i.ibb.co/QJ1gV2t/image-removebg-preview-2-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    /* background-position: 80% 60%; */
+    /* height: 90vh; */
+    width: auto;
+    color: white;
+    animation: slideBg 10s infinite ease;
+    /* background: #000; */
+}
+
+#card-heading {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#card-1 {
+    cursor: pointer;
+}
+
+#card-2 {
+    cursor: pointer;
+}
+
+#card-3 {
+    cursor: pointer;
+}
+
+.bg_color {
+    background: #0BC06C;
+}
+
+.black-img {
+    filter: invert(100%);
 }
