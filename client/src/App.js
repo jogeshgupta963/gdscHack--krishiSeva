@@ -1,7 +1,7 @@
 import {Fragment} from 'react';
 import Home from './components/Home/Home';
-// import Login from './components/Auth/Login/Login.js';
-import Login from './components/Auth/Forget Pass/Reset';
+import Login from './components/Auth/Login/Login.js';
+// import Login from './components/Auth/Forget Pass/Reset';
 import Register from './components/Auth/Register/Register';
 // import Navbar from './components/Navbar/Navbar.js';
 // import LandingPage from './components/LandingPage/LandingPage';
