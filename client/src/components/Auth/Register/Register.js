@@ -16,6 +16,7 @@ function Register() {
   const name = useRef("");
   const pass = useRef("");
   const conPass = useRef("");
+  const role = useRef("");
   const phnNum = useRef(0);
   const { isLoggedIn } = useSelector((state) => state.auth);
 
@@ -24,7 +25,7 @@ function Register() {
   const clickHandle = async (e) => {
     e.preventDefault();
 
-    console.log(name.current.value);
+    // console.log(role.current.value);
     var user;
 
     if (pass.current.value === conPass.current.value) {
@@ -36,21 +37,19 @@ function Register() {
           name: name.current.value,
           phoneNumber: phnNum.current.value,
           password: pass.current.value,
+          designation:role.current.value
         }
       );
-      console.log(user.data);
-      return;
+      // return;
     }
-
+    
     if (!user.data.status) {
       console.log(user.data.msg);
       return;
     }
-    // dispatch(signup());
-    // if (!user.data.status) console.log(user.data.msg);
-    // dispatch (signup ());
+    window.location.reload();
   };
-
+  
   return (
     <Fragment>
       {Cookies.get("JWT") && <Navigate to="/dashboard" />}
@@ -105,10 +104,11 @@ function Register() {
                       name="type"
                       id="type"
                       className="form-control mb-3 w-25 text-light border-0"
+                      ref={role}
                     >
-                      <option value="volvo">Farmer</option>
-                      <option value="saab">MiddleMan</option>
-                      <option value="opel">Expert</option>
+                      <option value="Farmer">Farmer</option>
+                      <option value="Middleman">MiddleMan</option>
+                      <option value="Expert">Expert</option>
                     </select>
                   </div>
 

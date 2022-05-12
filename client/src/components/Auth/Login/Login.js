@@ -31,8 +31,8 @@ function Login() {
     if (!userLogin.data.status) {
       console.log(userLogin.data.msg);
     }
-
-    // dispatch(() => login());
+    // <Navigate to="/dashboard" />
+    window.location.reload()
   }
 
   return (
@@ -53,7 +53,7 @@ function Login() {
             </div>
 
             <div className="form_box">
-              <form>
+              <form onSubmit={clickHandle} >
                 <div className="form-group row ms-5 mt-5">
                   <label for="formGroupExampleInput">
                     Phone Number
@@ -98,7 +98,7 @@ function Login() {
                   </div>
 
                   <button
-                    onClick={clickHandle}
+                    // onClick={clickHandle}
                     className="btn text-center text-light fw-bold mt-4 w-50 px-0 mx-3 py-2"
                     id="login_btn"
                   >
