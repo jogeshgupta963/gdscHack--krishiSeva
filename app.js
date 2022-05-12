@@ -22,10 +22,12 @@ app.use(cookieParser());
 const userRouter = require("./server/routers/user.js");
 const farmerRouter = require("./server/routers/farmer.js");
 const expertRouter = require("./server/routers/expert");
+const middleman = require("./server/routers/middleman");
 
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/profile", farmerRouter);
 app.use("/api/v1/expert", expertRouter);
+app.use("/api/v1/middleman", middleman);
 
 //db connection
 

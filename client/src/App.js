@@ -14,16 +14,13 @@ function App () {
       <Router>
         <Fragment>
           <Routes>
-
             <Route path="/dashboard" element={<LandingPage />} />
             <Route path="/" element={<Home />} />
-
           </Routes>
 
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-
           </Routes>
 
         </Fragment>
