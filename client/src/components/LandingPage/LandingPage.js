@@ -66,7 +66,7 @@ function LandingPage () {
           className="text-decoration-none text-light col-lg-4 col-md-6 justify-content-center row align-items-center"
         >
           <div
-            class=" col-lg-9 col-xl-7 col-md-8 col-sm-6 col-12 my-3 option"
+            class=" col-lg-9 col-xl-8 col-md-8 col-sm-6 col-12 my-3 option"
             id="card-1"
           >
             <div class="card border-0 bg_color">
@@ -91,7 +91,7 @@ function LandingPage () {
           className="text-decoration-none text-light col-lg-4 col-md-6 justify-content-center row align-items-center"
         >
           <div
-            class=" col-lg-9 col-xl-7 col-md-8 col-sm-6 col-12 my-3 option"
+            class=" col-lg-9 col-xl-8 col-md-8 col-sm-6 col-12 my-3 option"
             id="card-1"
           >
             <div class="card border-0 bg_color">
@@ -116,7 +116,7 @@ function LandingPage () {
           className="text-decoration-none text-light col-lg-4 col-md-6 justify-content-center row align-items-center"
         >
           <div
-            class=" col-lg-9 col-xl-7 col-md-8 col-sm-6 col-12 my-3 option"
+            class=" col-lg-9 col-xl-8 col-md-8 col-sm-6 col-12 my-3 option"
             id="card-1"
           >
             <div class="card border-0 bg_color">
@@ -141,7 +141,7 @@ function LandingPage () {
           className="text-decoration-none text-light col-lg-4 col-md-6 justify-content-center row align-items-center"
         >
           <div
-            class=" col-lg-9 col-xl-7 col-md-8 col-sm-6 col-12 my-3 option"
+            class=" col-lg-9 col-xl-8 col-md-8 col-sm-6 col-12 my-3 option"
             id="card-1"
           >
             <div class="card border-0 bg_color">
@@ -166,7 +166,7 @@ function LandingPage () {
           className="text-decoration-none text-light col-lg-4 col-md-6 justify-content-center row align-items-center"
         >
           <div
-            class=" col-lg-9 col-xl-7 col-md-8 col-sm-6 col-12 my-3 option"
+            class=" col-lg-9 col-xl-8 col-md-8 col-sm-6 col-12 my-3 option"
             id="card-1"
           >
             <div class="card border-0 bg_color">
