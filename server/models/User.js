@@ -20,7 +20,7 @@ const userSchema = mongoose.Schema({
     },
     designation:{
         type:String,
-        enum:["Farmer","Expert","Middlemen"],
+        enum:["Farmer","Expert","Middleman"],
         default:"Farmer"
     }
 })
