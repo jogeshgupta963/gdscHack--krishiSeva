@@ -25,12 +25,30 @@ async function jwtVerify(req, res, next) {
 }
 
 async function isExpert(req,res,next){
-    if(req.user && req.user.designation ==='Expert') {
+    try {
+        
+        if(req.user && req.user.designation ==='Expert') {
         next()
     }else{
         res.status(401)
         throw new Error('Not authorized as an Admin')
     }
+} catch (error) {
+        res.status(500).json(error.message)
+}
+}
+async function isMiddleman(req,res,next){
+    try {
+        
+        if(req.user && req.user.designation ==='Middleman') {
+            next()
+        }else{
+            res.status(401)
+            throw new Error('Not authorized as an Admin')
+        }
+    } catch (error) {
+        res.status(500).json(error.message)
+    }
 }
 
-module.exports = { jwtVerify,isExpert }
+module.exports = { jwtVerify,isExpert,isMiddleman }

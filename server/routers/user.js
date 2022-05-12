@@ -1,7 +1,8 @@
 const express = require('express')
 
 // const user = require('../models/user')
-const { signupUser, login } = require('../controller/user.js')
+const { signupUser, login,logout } = require('../controller/user.js');
+const { jwtVerify } = require('../middleware/authHelper.js');
 const userRouter = express.Router();
 
 //@route  POST /api/v1/user/signup
@@ -9,7 +10,6 @@ const userRouter = express.Router();
 //access public
 userRouter
     .route('/signup')
-    // .get(getSignup)
     .post(signupUser)
 
     
@@ -18,10 +18,11 @@ userRouter
 //access public
 userRouter
     .route('/login')
-    // .get(getLogin)
     .post(login)
 
-
+userRouter
+.route('/logout')
+.post(jwtVerify,logout)
 
 
 module.exports = userRouter

@@ -63,13 +63,14 @@ async function login(req, res) {
     }
 }
 
-// function getLogin(req, res) {
-//     // res.sendFile(path.join(__dirname,"../public/","login.html"));
-//     res.sendFile(path.join(__dirname, "../../client/login.html"))
-// }
+async function logout(req,res){
+    try {
+        req.cookies.JWT='';
+        res.cookie('JWT',{maxAge:1})
+        res.json("logged out")
+    } catch (err) {
+    res.status(500).json(err.message);
+    }
+}
 
-// function getSignup(req, res) {
-//     res.sendFile(path.join(__dirname, "../../client/register.html"))
-// }
-
-module.exports = { signupUser, login }
+module.exports = { signupUser, login,logout }
