@@ -29,6 +29,7 @@ async function signupUser(req, res) {
 
         const JWT = jwt.sign({ user: farmer._id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRESIN,})
 
+        // res.cookie("JWT", JWT,{httpOnly:true})
         res.cookie("JWT", JWT)
         res.status(200).json({status:true,msg:"user registered"})
     } catch (err) {

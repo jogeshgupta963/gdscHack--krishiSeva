@@ -24,4 +24,13 @@ async function jwtVerify(req, res, next) {
 
 }
 
-module.exports = { jwtVerify }
+async function isExpert(req,res,next){
+    if(req.user && req.user.designation ==='Expert') {
+        next()
+    }else{
+        res.status(401)
+        throw new Error('Not authorized as an Admin')
+    }
+}
+
+module.exports = { jwtVerify,isExpert }

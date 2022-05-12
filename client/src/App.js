@@ -14,13 +14,18 @@ function App () {
       <Router>
         <Fragment>
           <Routes>
+// <<<<<<< jogesh/backend
+            <Route path="/dashboard" element={<LandingPage/>} />
+              <Route path="/" element={<Home />} />
+// =======
             {/* <Route path="/" element={<LandingPage/>} /> */}
-            <Route path="/" element={<Home />} />
+//             <Route path="/" element={<Home />} />
           </Routes>
 
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+// >>>>>>> master
           </Routes>
 
         </Fragment>

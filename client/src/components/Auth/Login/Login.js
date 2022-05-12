@@ -1,129 +1,44 @@
+import React, { Fragment, useRef, useState } from "react";
+import { Link, Navigate } from "react-router-dom";
+import Navbar from "../../Navbar/Navbar";
+import "./Login.css";
 
-// <<<<<<< jogesh/backend
-// =======
-// import React, { Fragment, useState } from "react";
-// import { Link } from "react-router-dom";
-// import Navbar from "../../Navbar/Navbar";
-// import "./Login.css";
+import { login } from "../../../redux/auth";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import Cookies from "js-cookie";
 
+function Login() {
+  const { isLoggedIn } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
 
-// import { login } from "../../../redux/auth";
-// import {outputMessage} from '../../../redux/msg'
-// import { useDispatch, useSelector } from "react-redux";
-// import axios from "axios";
+  // const [phnNum, setPhnNum] = useState(0);
+  // const [password, setPassword] = useState("");
 
-// function Login() {
-  
-//   const {isLoggedIn} = useSelector(state=>state.auth)
-//   const {message} = useSelector(state=>state.msg)
-//   const dispatch = useDispatch()
-  
-//   const [phnNum, setPhnNum] = useState(0);
-//   const [password, setPassword] = useState("");
+  const phnNum = useRef(0);
+  const password = useRef("");
 
-//   async function clickHandle(e) {
-//     e.preventDefault();
-    
-//     let userLogin = await axios.post('http://localhost:3000/api/v1/user/login',{phoneNumber:phnNum , password}) 
+  async function clickHandle(e) {
+    e.preventDefault();
 
-//     if(!userLogin.data.status){
-//       dispatch(()=>outputMessage(userLogin.data.msg))
-//       // console.log(userLogin.data.msg)
-//       return;
-//     }
-    
-//     dispatch(()=>login())
-//     dispatch(()=>outputMessage(userLogin.data.msg))
-
-// >>>>>>> master
-import React, {Fragment, useState} from 'react';
-import {Link} from 'react-router-dom';
-import Navbar from '../../Navbar/Navbar';
-import './Login.css';
-
-import {login} from '../../../redux/auth';
-import {useDispatch, useSelector} from 'react-redux';
-import axios from 'axios';
-
-function Login () {
-  const {isLoggedIn} = useSelector (state => state.auth);
-  const dispatch = useDispatch ();
-
-  const [phnNum, setPhnNum] = useState (0);
-  const [password, setPassword] = useState ('');
-
-  async function clickHandle (e) {
-    e.preventDefault ();
-
-    let userLogin = await axios.post (
-      'http://localhost:3000/api/v1/user/login',
-      {phoneNumber: phnNum, password}
+    axios.defaults.withCredentials = true;
+    let userLogin = await axios.post(
+      "http://localhost:3000/api/v1/user/login",
+      { phoneNumber: phnNum.current.value, password: password.current.value }
     );
-    console.log (userLogin);
+    console.log(userLogin);
 
     if (!userLogin.data.status) {
-      console.log (userLogin.data.msg);
+      console.log(userLogin.data.msg);
     }
-
-
-    dispatch (() => login ());
+    // <Navigate to="/dashboard" />
+    window.location.reload()
   }
 
   return (
     <Fragment>
+      {Cookies.get("JWT") && <Navigate to="/dashboard" />}
       <Navbar />
-      {/* <section class="vh-100"> */}
-      {/* <!-- <img src="images/login_element.png" class="login_element" alt="" /> --> */}
-      {/* <img src="/img/login_element.png" class="login_element" alt="" />
-      <h2 class="login">Welcome Back</h2>
-      <div class="image-container">
-        <img src="/img/login_bg.png" class="login_bg" alt="" /> */}
-      {/* <!-- <img src="images/login_bg.png" class="login_bg" alt="" /> --> */}
-      {/* </div>
-      <form class="login-container"> */}
-      {/* <!-- Phone Number --> */}
-      {/* <div class="form-outline mb-4">
-          <input
-            type="number"
-            id="typeEmailX-2"
-            placeholder="Phone Number"
-            class="form-control form-control-sm"
-          />
-        </div> */}
-
-      {/* <!-- Password --> */}
-      {/* <div class="form-outline mb-4">
-          <input
-            type="password"
-            placeholder="Enter Password"
-            id="login-password"
-            class="form-control form-control-sm"
-          />
-        </div>
-
-        <div class="options">
-          <p><input type="checkbox" name=" Remember me" id="" /> Remember me</p>
-          <p>Forgot password?</p>
-        </div> */}
-
-      {/* <!-- Login Button -->  */}
-      {/* <button
-          class="btn btn-primary btn-sm btn-block"
-          type="submit"
-          id="login-btn"
-        >
-          <a href="/api/v1/farmer/home"> Sign In</a>
-        </button>
-
-        <div class="footer-text">
-          <p>
-            Don’t have an account?
-            <a href="/api/v1/user/signup"> Sign Up</a> */}
-      {/* <!-- <a href="register.html"> Sign up</a> --> */}
-      {/* </p>
-        </div>
-      </form>
-    </section> */}
 
       <div className="main_container container-fluid">
         <div className="row  align-items-center">
@@ -138,18 +53,7 @@ function Login () {
             </div>
 
             <div className="form_box">
-              {/* <form>
-  <div class="form-group">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"> </input>
-  </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">Another label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input"> </input>
-  </div>
-</form> */}
-
-              <form>
+              <form onSubmit={clickHandle} >
                 <div className="form-group row ms-5 mt-5">
                   <label for="formGroupExampleInput">
                     Phone Number
@@ -159,7 +63,8 @@ function Login () {
                       className="form-control my-3 w-50"
                       placeholder="Your Phone Number Here"
                       autocomplete="off"
-                      onChange={e => setPhnNum (e.target.value)}
+                      // onChange={(e) => setPhnNum(e.target.value)}
+                      ref={phnNum}
                     />
                   </label>
                   <label for="inputPassword6">
@@ -169,7 +74,8 @@ function Login () {
                       name="name"
                       className="form-control my-3 w-50"
                       placeholder="Your Password Here"
-                      onChange={e => setPassword (e.target.value)}
+                      // onChange={(e) => setPassword(e.target.value)}
+                      ref={password}
                     />
                   </label>
                   <div class="form-check ms-3">
@@ -192,7 +98,7 @@ function Login () {
                   </div>
 
                   <button
-                    onClick={clickHandle}
+                    // onClick={clickHandle}
                     className="btn text-center text-light fw-bold mt-4 w-50 px-0 mx-3 py-2"
                     id="login_btn"
                   >
@@ -206,7 +112,7 @@ function Login () {
                     Login
                   </Link> */}
                   <p className="text-light mt-3 ms-2">
-                    Don't have an account? Sign up{' '}
+                    Don't have an account? Sign up{" "}
                     <Link to="/Register" className="text-light">
                       here
                     </Link>

@@ -9,23 +9,29 @@ const cors=require('cors')
 const connect = require("./server/dbConnection/connect");
 const app = express();
 
-app.use(cors())
+app.use(cors(({
+  origin: true, // reflect request origin
+  credentials: true
+})))
 app.use(express.json());
 app.use(cookieParser());
-app.use("/css", express.static(__dirname + "/client/components/css"));
-app.use("/js", express.static(__dirname + "/client/components/js"));
-app.use("/img", express.static(__dirname + "/client/images"));
+// app.use("/css", express.static(__dirname + "/client/components/css"));
+// app.use("/js", express.static(__dirname + "/client/components/js"));
+// app.use("/img", express.static(__dirname + "/client/images"));
 //routers
 const userRouter = require("./server/routers/user.js");
 const farmerRouter = require("./server/routers/farmer.js");
+const expertRouter = require("./server/routers/expert");
 
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/profile", farmerRouter);
+app.use("/api/v1/expert", expertRouter);
 
 //db connection
-app.get("/api/v1/index", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/index.html"));
-});
+
+// app.get("/api/v1/index", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/client/index.html"));
+// });
 
 
 (async function () {

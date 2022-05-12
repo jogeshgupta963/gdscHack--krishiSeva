@@ -1,12 +1,16 @@
 import React, {Fragment} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Navigate} from 'react-router-dom';
 import './LandingPage.css';
 import Navbar from '../Navbar/Navbar';
+import Cookies from "js-cookie";
 function LandingPage () {
   return (
     <Fragment>
-      <Navbar />
+
+      { !Cookies.get('JWT') && <Navigate to='/login' />}
+      {/* <Navbar /> */}
       <div class="container-fluid main-container_1">
+      
 
         {/* < img src = 'https://i.ibb.co/r4mq8nd/agrigator-digital-farming-platform-pic-ds1-1.jp' > </img> */}
         <div
