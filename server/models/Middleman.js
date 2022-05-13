@@ -20,14 +20,24 @@ const middlemanSchema = new mongoose.Schema({
     },
     referals:[
         {
+            farmer:{
             type:mongoose.Schema.Types.ObjectId,
             ref:'farmer'
+        },
+        referContent:{
+            type:String,
+        }
         }
     ],
     loan:[
         {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'farmer'
+            farmer:{
+                type:mongoose.Schema.Types.ObjectId,
+                ref:'farmer'
+            },
+            loanAmount:{
+                type:Number,
+            }
         }
     ]
 })

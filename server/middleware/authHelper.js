@@ -50,5 +50,18 @@ async function isMiddleman(req,res,next){
         res.status(500).json(error.message)
     }
 }
+async function isFarmer(req,res,next){
+    try {
+        
+        if(req.user && req.user.designation ==='Farmer') {
+            next()
+        }else{
+            res.status(401)
+            throw new Error('Not authorized as an Admin')
+        }
+    } catch (error) {
+        res.status(500).json(error.message)
+    }
+}
 
-module.exports = { jwtVerify,isExpert,isMiddleman }
+module.exports = { jwtVerify,isExpert,isMiddleman,isFarmer }
