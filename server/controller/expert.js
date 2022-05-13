@@ -77,7 +77,7 @@ async function updateExpertProfile(req,res){
         reqKeys.map(key=>{
             user[key] = req.body[key];
         })
-
+        await user.save();
         res.status(200).json({
             status:true,
             msg:"updated profile successfully"
