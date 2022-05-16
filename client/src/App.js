@@ -12,18 +12,17 @@ function App () {
   return (
     <Fragment>
       <Router>
-        <Fragment>
-          <Routes>
-            <Route path="/dashboard" element={<LandingPage />} />
-            <Route path="/" element={<Home />} />
-          </Routes>
 
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-          </Routes>
+        <Routes>
+          <Route path="/dashboard" element={<LandingPage />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
 
-        </Fragment>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+
       </Router>
     </Fragment>
   );
